@@ -1,0 +1,157 @@
+
+.stateborders {
+    fill: none;
+    stroke: #ccc;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.metros {
+    stroke: none;
+}
+
+.statemap {
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+.metros.selected,
+.metros.hovered,
+.statemap.selected,
+.statemap.hovered,
+.st0.selected,
+.st0.hovered {
+    stroke: #fdbf11;
+    stroke-width: 3px;
+}
+
+/*svg grid map*/
+
+.st2 {
+    font-size: 10px;
+    fill: #fff;
+}
+
+#tilemap {
+    margin-top: 30px;
+}
+
+.tt {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.tt-value, #tt-num {
+    /*display: inline-block;*/
+    font-size: 14px;
+}
+
+.tt-name,
+.tt-title {
+    font-size: 18px;
+    display: inline-block;
+}
+
+#tt-year {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 20px;
+}
+/*animation buttons*/
+
+.layer-holder {
+    width: 100%;
+}
+
+#layers {
+    margin: auto;
+    color: #333;
+    position: relative !important;
+    top: 12px;
+    height: auto;
+    background-color: #e2e2e2;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 10;
+    min-height: 36px;
+}
+
+#layers a {
+    display: inline-block;
+    margin: 5px 1px 1px 1px;
+    padding: 6px;
+    height: 28px;
+    width: 36px;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#layers a.active,
+#layers a#play_button:hover {
+    background: #fdbf11;
+    color: #000000;
+    font-weight: 900;
+}
+
+#layers a:hover {
+    cursor: pointer;
+}
+
+#layers a#play_button {
+    background: #000;
+}
+/***line charts***/
+
+.chartline {
+    fill: none;
+    stroke-width: 1px;
+}
+
+.chartline.selected,
+.chartline.hovered {
+    stroke: #fdbf11;
+    stroke-width: 3;
+}
+
+.axis,
+.axis-show {
+    font-size: 12px;
+    color: #333;
+}
+
+.axis path {
+    display: none;
+}
+
+.axis line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis .minor line {
+    stroke: #efefef;
+}
+
+.axis-show path,
+.axis-show line {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.zeroline {
+    stroke: #000;
+    stroke-width: 1;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.legend {
+    font-size: 12px;
+    fill: #333;
+}

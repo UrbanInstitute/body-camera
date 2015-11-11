@@ -1,0 +1,41 @@
+"category","statcode","statistics_label","statlabel","statid"
+"Population","TotalNum","Population total","Total Number of Children of Immigrants",1
+"Population","Share","Share","Children of Immigrants, Share",2
+"Population","Percent","Percent of Total","Percent of Children of Immigrants",3
+"Education","age0_3","Age 0 to 3","Age 0 to 3",14
+"Education","age4_5","Age 4 to 5","Age 4 to 5",16
+"Education","age6_12","Age 6 to 8","Age 6 to 12",18
+"Education","age13_17","Age 13 to 15","Age 13 to 17",22
+"Education","NIS35","Not in school, age 3 to 5","Who are not in school, age 3 to 5",26
+"Education","NIS617","Not in school, age 6 to 17","Who are not in school, age 6 to 17",38
+"Citizenship","notCit","Noncitizen","Who are not citizens",42
+"English_Proficiency","engPro","English proficient","Who are English Proficient",48
+"English_Proficiency","limEng","Limited English Proficient","With Limited English Proficiency",50
+"Citizenship","citNotCitPar","Citizen children with noncitizen parents","Who are citizens with non-citizen parents",76
+"Citizenship","citCitPar","Citizen children with citizen parents","Who are citizens with citizen parents",80
+"Country_of_Origin_of_Parents","Africa","Parents from Africa","Africa",84
+"Country_of_Origin_of_Parents","eAsia","Parents from East Asia & Pacific","East Asia & Pacific",86
+"Country_of_Origin_of_Parents","europe","Parents from Europe, Canada & Australia","Europe, Canada & Australia",88
+"Country_of_Origin_of_Parents","mexico","Parents from Mexico","Mexico",90
+"Country_of_Origin_of_Parents","centralAmerica","Parents from Other Central America & Spanish Caribbean","Other Central America & Spanish Caribbean",92
+"Country_of_Origin_of_Parents","southAmerica","Parents from South America","South America",94
+"Country_of_Origin_of_Parents","seAsia","Parents from Southeast Asia","Southeast Asia",96
+"Country_of_Origin_of_Parents","midEast","Parents from the Middle East & South Asia","The Middle East & South Asia",98
+"English_Proficiency","oneleppar","At least one Limited English Proficient parent","At least one Limited English Proficient Parent",100
+"English_Proficiency","eppars","English proficient parents","English Proficient Parents",102
+"English_Proficiency","noeppars","No English proficient parents","No English Proficient Parents",104
+"Education","lTHS","Parents with less than High School degree","With parents who have less than a high school degree",108
+"Education","HS","Parents with High School degree","With parents who have a high school degree",110
+"Education","col","Parents with at least four-year college degree","With parents who have at least four year college degree",112
+"Family_Structure","onekid","One child in family","One child in family",114
+"Family_Structure","twokid","Two children in family","Two children in famiy",116
+"Family_Structure","threekid","Three to four children in family","Three children in family",118
+"Family_Structure","fourkid","More than four children in family","More than four children in family",120
+"Family_Structure","sPar","One-parent families","In single parent families",130
+"Family_Structure","tPar","Two-parent families","In two-parent families",132
+"English_Proficiency","linIso","Linguistically isolated household","Who live in Linguistically Isolated Households",134
+"Poverty_Income_and_Benefit_Receipt","pov100","Family incomes below poverty","In families below 100% of the poverty line",138
+"Poverty_Income_and_Benefit_Receipt","pov200","Family incomes below twice poverty level","In families below 200% of the poverty line",142
+"Poverty_Income_and_Benefit_Receipt","home","Household owns home","Household owns Home",150
+"Poverty_Income_and_Benefit_Receipt","work","Working families","Working Family",160
+"Poverty_Income_and_Benefit_Receipt","LIWF","Low-income working families","In low income working families",164
