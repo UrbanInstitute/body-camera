@@ -1,0 +1,21 @@
+.yes{
+	background-color:#1696d2;
+}
+.no{
+	background-color:#fff;
+}
+#bodycam{
+	font-size: 12px;
+}
+#bodycam td{
+	border: 1px solid #efefef;
+	padding: 2px;
+	min-width: 25px;
+	text-align: center;
+}
+
+.map-cell{
+	width: 100px;
+	/*background-color: #fdbf11;*/
+	height: 25px;
+}
