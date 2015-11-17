@@ -4,8 +4,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ePutuYZqgK
 
 function init() {
     Tabletop.init( { key: public_spreadsheet_url,
-     callback: showInfo,
-     simpleSheet: true } );
+       callback: showInfo,
+       simpleSheet: true } );
 }
 
 function showInfo(data) {
@@ -14,82 +14,85 @@ function showInfo(data) {
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].pass, data[1].Name, data[2].Name ].join(", ");
         // console.log(data);
 
-        d3.select("#bodycam")
-        .selectAll("tr")
-        .selectAll("td")
-        .data(data)
-        .enter()
-        .append("td")
-        .text(function(d) {
-            if (d3.select(this).node().parentNode.id == "r1"){ //row 1
-                return d.ABBR;
-            // } else if (d3.select(this).node().parentNode.id == "r2"){ //row2
-            //     return d.State;
-            // } else if (d3.select(this).node().parentNode.id == "r3"){ //row3
-            //     return d.State;
-            // } else if (d3.select(this).node().parentNode.id == "r4"){ //row4
-            //     return d.State;
-            // } else if (d3.select(this).node().parentNode.id == "r5"){ //row4
-            //     return d.State;
-            // } else if (d3.select(this).node().parentNode.id == "r6"){ //row4
-            //     return d.State;
-            }
-        })
-        .attr("class", function(d) {
-            if (d3.select(this).node().parentNode.id == "r2"){ //row2
-                if( d.passed == "X"){
-                    return "yes";
-                }
-                else{
-                    return "no";
-                }
-            }
-            if (d3.select(this).node().parentNode.id == "r3"){ //row3
-                if( d.CreatesRecommendsaStudyGroupPilotProgram == "X"){
-                    return "yes";
-                }
-                else{
-                    return "no";
-                }
-            }
-            if (d3.select(this).node().parentNode.id == "r4"){ //row4
-                if( d.AddressesWiretappingPrivacyIssues == "X"){
-                    return "yes";
-                }
-                else{
-                    return "no";
-                }
-            }
-            if (d3.select(this).node().parentNode.id == "r5"){ //row5
-                if( d.DictatesWhereCamerasCanGoBeTurnedOnandOff == "X"){
-                    return "yes";
-                }
-                else{
-                    return "no";
-                }
-            }
-            if (d3.select(this).node().parentNode.id == "r6"){ //row6
-                if( d.PresumptivelyShieldsFootagefromPublicDisclosure == "X"){
-                    return "yes";
-                }
-                else{
-                    return "no";
-                }
-            }
+        
+        // The table generation function
+        function tabulate(data, columns) {
+            var table = d3.select("#body-cam").append("table")
+            .style("border-collapse", "collapse")// <= Add this line in
+            thead = table.append("thead"),
+            tbody = table.append("tbody");
+
+    // append the header row
+    thead.append("tr")
+    .selectAll("th")
+    .data(columns)
+    .enter()
+    .append("th")
+    .text(function(column) {if (column == "passed")return "Passed";
+if (column == "proposedOrPending")return "Proposed or Pending ";
+if (column == "CreatesRecommendsaStudyGroupPilotProgram")return "Creates or Recommends a Study Group Pilot Program";
+if (column == "AddressesWiretappingPrivacyIssues")return "Addresses Wiretapping Privacy Issues";
+if (column == "DictatesWhereCamerasCanGoBeTurnedOnandOff")return "Dictates Where Cameras Can Go and if They Can Be Turned On and Off";
+if (column == "PresumptivelyShieldsFootagefromPublicDisclosure")return "Presumptively Shields Footage from Public Disclosure";
+if (column == "AddressesRedactions")return "Addresses Redactions";
+if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Stageand Time That Footage Must be Kept"; });
+
+        // append the map row
+    thead.append("tr")
+    .selectAll("td")
+    .data(columns)
+    .enter()
+    .append("td")
+    .attr("class", function(d){
+        if (d.value != "State"){return "map-cell";}});
+
+    // create a row for each object in the data
+    var rows = tbody.selectAll("tr")
+    .data(data)
+    .enter()
+    .append("tr");
+
+    // create a cell in each row for each column
+    var cells = rows.selectAll("td")
+    .data(function(row) {
+        return columns.map(function(column) {
+            return {column: column, value: row[column]};
         });
+    })
+    .enter()
+    .append("td")
+    .text(function(d) { if (d.value != "X")return d.value; })
+    .attr("class", function(d){
+         if( d.value == "X"){
+     return "yes";
+     }
+     else if (d.value == ""){
+         return "no";
+     }
+     else{
+         return "rowLabel";
+    
+    }
+});
+        return table;
+    }
+
+// render the table
+var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "CreatesRecommendsaStudyGroupPilotProgram"  ,  "AddressesWiretappingPrivacyIssues"  , "DictatesWhereCamerasCanGoBeTurnedOnandOff"  , "PresumptivelyShieldsFootagefromPublicDisclosure" ,"AddressesRedactions" ,"AddressesStageandTimethatFootageMustbeKept"]);
+
 
 
 
 //map stuff
 
             //Width and height
-            var w = 250;
-            var h = 150;
+            var w = 175;
+            var h = 100;
 
             //Define map projection
             var projection = d3.geo.albersUsa()
             .translate([w/2, h/2])
-            .scale([250]);
+            .scale([190]);
 
             //Define path generator
             var path = d3.geo.path()
@@ -104,20 +107,11 @@ function showInfo(data) {
             .append("svg")
             .attr("width", w)
             .attr("height", h)
-            // .attr("id", function(d){
-            //     if (d3.select(this).node().parentNode.parentNode.id == "r2"){ //row2
-            //         return "map2";
-            //     } else if (d3.select(this).node().parentNode.parentNode.id == "r3"){ //row2
-            //         return "map3";
-            //     } else if (d3.select(this).node().parentNode.parentNode.id == "r4"){ //row2
-            //         return "map4";
-            //     } else if (d3.select(this).node().parentNode.parentNode.id == "r5"){ //row2
-            //         return "map5";
-            //     } else if (d3.select(this).node().parentNode.parentNode.id == "r6"){ //row2
-            //         return "map6";
-            //     }
-            // })
-            .data(data);
+            .data(data)
+            .attr("id", function(d,i){
+                    console.log(i);
+                    return "map"+i;
+            });
 
             //Load in data
 
@@ -127,11 +121,15 @@ function showInfo(data) {
                 d3.max(data, function(d) { return d.passed; })
                 ]);
 
+            var map0 = d3.select("#map0");
+            var map1 = d3.select("#map1");
             var map2 = d3.select("#map2");
             var map3 = d3.select("#map3");
             var map4 = d3.select("#map4");
             var map5 = d3.select("#map5");
             var map6 = d3.select("#map6");
+            var map7 = d3.select("#map7");
+            var map8 = d3.select("#map8");
 
             //Load in GeoJSON data
             d3.json("data/us_states.json", function(json) {
@@ -166,15 +164,14 @@ function showInfo(data) {
 
 
                 //Bind data and create one path per GeoJSON feature
-                map2.selectAll("path")
+                map1.selectAll("path")
                 .data(json.features)
                 .enter()
                 .append("path")
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                         console.log(d);
-                         if (d.properties.value){
+                        if (d.properties.value){
                             var value = d.properties.value.passed;
 
                             if (value) {
@@ -188,6 +185,28 @@ function showInfo(data) {
                     });
 
                 //Bind data and create one path per GeoJSON feature
+                map2.selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .style("fill", function(d) {
+                        //Get data value
+                        if (d.properties.value){
+                            var value = d.properties.value.proposedOrPending;
+
+                            if (value) {
+                                //If value exists…
+                                return "#1696d2";
+                            } else {
+                                //If value is undefined…
+                                return "#eee";
+                            }
+                        }
+                    });
+
+
+                //Bind data and create one path per GeoJSON feature
                 map3.selectAll("path")
                 .data(json.features)
                 .enter()
@@ -195,8 +214,8 @@ function showInfo(data) {
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                         console.log(d);
-                         if (d.properties.value){
+                        console.log(d);
+                        if (d.properties.value){
                             var value = d.properties.value.CreatesRecommendsaStudyGroupPilotProgram;
 
                             if (value) {
@@ -217,8 +236,8 @@ function showInfo(data) {
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                         console.log(d);
-                         if (d.properties.value){
+                        console.log(d);
+                        if (d.properties.value){
                             var value = d.properties.value.AddressesWiretappingPrivacyIssues;
 
                             if (value) {
@@ -239,8 +258,8 @@ function showInfo(data) {
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                         console.log(d);
-                         if (d.properties.value){
+                        console.log(d);
+                        if (d.properties.value){
                             var value = d.properties.value.DictatesWhereCamerasCanGoBeTurnedOnandOff;
 
                             if (value) {
@@ -261,9 +280,53 @@ function showInfo(data) {
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                         console.log(d);
-                         if (d.properties.value){
+                        console.log(d);
+                        if (d.properties.value){
                             var value = d.properties.value.PresumptivelyShieldsFootagefromPublicDisclosure;
+
+                            if (value) {
+                                //If value exists…
+                                return "#1696d2";
+                            } else {
+                                //If value is undefined…
+                                return "#eee";
+                            }
+                        }
+                    });
+
+                //Bind data and create one path per GeoJSON feature
+                map7.selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .style("fill", function(d) {
+                        //Get data value
+                        console.log(d);
+                        if (d.properties.value){
+                            var value = d.properties.value.AddressesRedactions;
+
+                            if (value) {
+                                //If value exists…
+                                return "#1696d2";
+                            } else {
+                                //If value is undefined…
+                                return "#eee";
+                            }
+                        }
+                    });
+
+                //Bind data and create one path per GeoJSON feature
+                map8.selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .style("fill", function(d) {
+                        //Get data value
+                        console.log(d);
+                        if (d.properties.value){
+                            var value = d.properties.value.AddressesStageandTimethatFootageMustbeKept;
 
                             if (value) {
                                 //If value exists…

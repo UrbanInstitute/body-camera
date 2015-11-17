@@ -1,22 +1,42 @@
 .yes{
 	background-color:#1696d2;
 	fill:#1696d2;
+
+
 }
 .no{
-	background-color:#fff;
+	background-color:#efeeee;
 }
-#bodycam{
+table{
 	font-size: 12px;
 }
-#bodycam td{
-	border: 1px solid #efefef;
+td{
+	border: 1px solid #fff;
+	padding-left: 2px;
+	padding-right: 2px;
+	min-width: 25px;
+	text-align: right;
+}
+
+th{
+	border: 1px solid #fff;
 	padding: 2px;
 	min-width: 25px;
 	text-align: center;
+	max-width: 170px;
+}
+
+.rowLabel{
+	width: auto;
+	white-space: nowrap;
 }
 
 .map-cell{
 	width: 100px;
 	/*background-color: #fdbf11;*/
 	height: 25px;
+}
+
+#map0{
+	display: none;
 }
