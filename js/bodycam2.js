@@ -4,8 +4,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ePutuYZqgK
 
 function init() {
     Tabletop.init( { key: public_spreadsheet_url,
-       callback: showInfo,
-       simpleSheet: true } );
+     callback: showInfo,
+     simpleSheet: true } );
 }
 
 function showInfo(data) {
@@ -29,22 +29,22 @@ function showInfo(data) {
     .enter()
     .append("th")
     .text(function(column) {if (column == "passed")return "Passed";
-if (column == "proposedOrPending")return "Proposed or Pending ";
-if (column == "CreatesRecommendsaStudyGroupPilotProgram")return "Creates or Recommends a Study Group Pilot Program";
-if (column == "AddressesWiretappingPrivacyIssues")return "Addresses Wiretapping Privacy Issues";
-if (column == "DictatesWhereCamerasCanGoBeTurnedOnandOff")return "Dictates Where Cameras Can Go and if They Can Be Turned On and Off";
-if (column == "PresumptivelyShieldsFootagefromPublicDisclosure")return "Presumptively Shields Footage from Public Disclosure";
-if (column == "AddressesRedactions")return "Addresses Redactions";
-if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Stageand Time That Footage Must be Kept"; });
+        if (column == "proposedOrPending")return "Proposed or Pending ";
+        if (column == "CreatesRecommendsaStudyGroupPilotProgram")return "Creates or Recommends a Study Group Pilot Program";
+        if (column == "AddressesWiretappingPrivacyIssues")return "Addresses Wiretapping Privacy Issues";
+        if (column == "DictatesWhereCamerasCanGoBeTurnedOnandOff")return "Dictates Where Cameras Can Go and if They Can Be Turned On and Off";
+        if (column == "PresumptivelyShieldsFootagefromPublicDisclosure")return "Presumptively Shields Footage from Public Disclosure";
+        if (column == "AddressesRedactions")return "Addresses Redactions";
+        if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Stageand Time That Footage Must be Kept"; });
 
         // append the map row
-    thead.append("tr")
-    .selectAll("td")
-    .data(columns)
-    .enter()
-    .append("td")
-    .attr("class", function(d){
-        if (d.value != "State"){return "map-cell";}});
+        thead.append("tr")
+        .selectAll("td")
+        .data(columns)
+        .enter()
+        .append("td")
+        .attr("class", function(d){
+            if (d.value != "State"){return "map-cell";}});
 
     // create a row for each object in the data
     var rows = tbody.selectAll("tr")
@@ -63,36 +63,42 @@ if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Sta
     .append("td")
     .text(function(d) { if (d.value != "X")return d.value; })
     .attr("class", function(d){
-         if( d.value == "X"){
-     return "yes";
-     }
-     else if (d.value == ""){
-         return "no";
-     }
-     else{
-         return "rowLabel";
-    
-    }
-});
-        return table;
-    }
+       if( d.value == "X"){
+           return "yes";
+       }
+       else if (d.value == ""){
+           return "no";
+       }
+       else{
+           return "rowLabel";
+
+       }
+   });
+    return table;
+}
 
 // render the table
 var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "CreatesRecommendsaStudyGroupPilotProgram"  ,  "AddressesWiretappingPrivacyIssues"  , "DictatesWhereCamerasCanGoBeTurnedOnandOff"  , "PresumptivelyShieldsFootagefromPublicDisclosure" ,"AddressesRedactions" ,"AddressesStageandTimethatFootageMustbeKept"]);
 
 
 
-
+function redraw(w, h){
 //map stuff
+console.log(w);
+
+d3.selectAll("svg").remove();
 
             //Width and height
-            var w = 175;
-            var h = 100;
+            // var w = 160;
+            // var h = 100;
+            // var viewbox = "0 0 160 100";
+            // var preserveAspectRatio="xMidYMin"
 
             //Define map projection
             var projection = d3.geo.albersUsa()
+            .scale([w*1.3])
             .translate([w/2, h/2])
-            .scale([190]);
+            // .scale(1);
 
             //Define path generator
             var path = d3.geo.path()
@@ -107,13 +113,18 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
             .append("svg")
             .attr("width", w)
             .attr("height", h)
+            // .attr("viewbox", viewbox)
+            // .attr("preserveAspectRatio", preserveAspectRatio)
             .data(data)
+            .attr("class", "responsiveMap")
             .attr("id", function(d,i){
-                    console.log(i);
-                    return "map"+i;
+                return "map"+i;
             });
 
-            //Load in data
+            //responsive map stuff
+            var aspect = 160 / 100
+            // responsiveMap = $(".responsiveMap");
+
 
             //Set input domain for color scale
             color.domain([
@@ -214,7 +225,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.CreatesRecommendsaStudyGroupPilotProgram;
 
@@ -236,7 +246,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.AddressesWiretappingPrivacyIssues;
 
@@ -258,7 +267,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.DictatesWhereCamerasCanGoBeTurnedOnandOff;
 
@@ -280,7 +288,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.PresumptivelyShieldsFootagefromPublicDisclosure;
 
@@ -302,7 +309,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.AddressesRedactions;
 
@@ -324,7 +330,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
                 .attr("d", path)
                 .style("fill", function(d) {
                         //Get data value
-                        console.log(d);
                         if (d.properties.value){
                             var value = d.properties.value.AddressesStageandTimethatFootageMustbeKept;
 
@@ -341,9 +346,15 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
 
             });
 
+}
 
+var cells = d3.select(".map-cell")
 
+redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height)
 
+$(window).on("resize", function() {
+    redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height-5)
+});
 
 
 
