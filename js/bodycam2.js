@@ -61,7 +61,10 @@ function showInfo(data) {
     })
     .enter()
     .append("td")
-    .text(function(d) { if (d.value != "X")return d.value; })
+    .text(function(d) { 
+        if (d.value != ''){
+            if (d.value != "X") return d.value;}
+         })
     .attr("class", function(d){
        if( d.value == "X"){
            return "yes";
@@ -71,9 +74,11 @@ function showInfo(data) {
        }
        else{
            return "rowLabel";
-
        }
-   });
+   })
+
+$(".rowLabel").wrapInner("<span class='stateName'></span>");
+
     return table;
 }
 
@@ -84,7 +89,6 @@ var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "C
 
 function redraw(w, h){
 //map stuff
-console.log(w);
 
 d3.selectAll("svg").remove();
 

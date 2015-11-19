@@ -9,11 +9,15 @@ html{
 .yes{
 	background-color:#1696d2;
 	fill:#1696d2;
-
-
+}
+.yes:hover{
+	background-color:#fdbf11;
 }
 .no{
 	background-color:#efeeee;
+}
+.highlighted{
+	background-color:#fdbf11;
 }
 table{
 	font-size: 12px;
@@ -34,6 +38,13 @@ th{
 	max-width: 170px;
 	font-size: 14px;
 	/*height: 200px;*/
+}
+
+tr:hover > .rowLabel *{
+	color: #000;
+	/*text-decoration: underline;*/
+	border-bottom: 3px solid #D0E9F4;
+	box-shadow: inset 0 -5px 0 #D0E9F4;
 }
 
 .rowLabel{
@@ -90,9 +101,13 @@ th{
 #intro-container{
 	position: absolute; z-index: -99; width: 100%; height: 100%;
 	background-color: #000;
+	overflow: hidden;
 }
 #intro-video{
 	opacity: 0.4;
+	position: relative;
+	left: -15%;
+	overflow: hidden;
 }
 #intro-gradient{
 	width:100%; 
@@ -130,7 +145,7 @@ th{
 	border: 2px solid #fff;
 	border-radius: 100%!important;
 	font-size: 40px;
-	color: #1696d2;
+	color: #fff;
 	background: 0 0;
 	-webkit-transition: background .3s ease-in-out;
 	-moz-transition: background .3s ease-in-out;
@@ -141,7 +156,7 @@ th{
 .btn-circle:focus {
 	outline: 0;
 	color: #1696d2;
-	background: rgba(255,255,255,.1);
+	background: rgba(0,0,0,.4);
 }
 
 .btn-circle i.animated {
