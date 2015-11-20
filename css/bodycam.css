@@ -39,8 +39,16 @@ html{
 	border-radius: 10px;
 	background-color:#eee;
 }
+.no:hover{
+	background-color: #ccc;
+}
 .highlighted{
 	background-color:#fdbf11;
+}
+#date{
+	font-size: 12px;
+	float: right;
+	color: #555;
 }
 table{
 	font-size: 12px;

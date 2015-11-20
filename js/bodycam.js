@@ -17,7 +17,10 @@ var promise = new Promise(function(resolve, reject) {
         // data comes through as a simple array since simpleSheet is turned on
         // alert("Successfully processed " + data.length + " rows!")
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].pass, data[1].Name, data[2].Name ].join(", ");
-        // console.log(data);
+
+        //last updated
+         // console.log(data[0].DateUpdated);
+         document.getElementById("date").innerHTML = "Data last updated " + data[0].DateUpdated;
         // The table generation function
         function tabulate(data, columns) {
                 var table = d3.select("#body-cam").append("table").style("border-collapse", "collapse") // <= Add this line in
