@@ -1,11 +1,12 @@
 window.onload = function() { init() };
 
 var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ePutuYZqgKWr7Z47cEfbHxCfpk4z5HoRoakYa8waR1E/pubhtml';
+var columnList = ["State", "passed","proposedOrPending" ,  "CreatesRecommendsaStudyGroupPilotProgram"  ,  "AddressesWiretappingPrivacyIssues"  , "DictatesWhereCamerasCanGoBeTurnedOnandOff"  , "PresumptivelyShieldsFootagefromPublicDisclosure" ,"AddressesRedactions" ,"AddressesStageandTimethatFootageMustbeKept"];
 
 function init() {
     Tabletop.init( { key: public_spreadsheet_url,
-     callback: showInfo,
-     simpleSheet: true } );
+       callback: showInfo,
+       simpleSheet: true } );
 }
 
 function showInfo(data) {
@@ -19,6 +20,8 @@ function showInfo(data) {
         function tabulate(data, columns) {
             var table = d3.select("#body-cam").append("table")
             .style("border-collapse", "collapse")// <= Add this line in
+            .attr("id", "body-cam-table")
+            .attr("class", "floatThead-table")
             thead = table.append("thead"),
             tbody = table.append("tbody");
 
@@ -35,7 +38,8 @@ function showInfo(data) {
         if (column == "DictatesWhereCamerasCanGoBeTurnedOnandOff")return "Dictates Where Cameras Can Go and if They Can Be Turned On and Off";
         if (column == "PresumptivelyShieldsFootagefromPublicDisclosure")return "Presumptively Shields Footage from Public Disclosure";
         if (column == "AddressesRedactions")return "Addresses Redactions";
-        if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Stageand Time That Footage Must be Kept"; });
+        if (column == "AddressesStageandTimethatFootageMustbeKept")return "Addresses Stageand Time That Footage Must be Kept"; })
+    .attr("class","section-header");
 
         // append the map row
         thead.append("tr")
@@ -56,7 +60,7 @@ function showInfo(data) {
     var cells = rows.selectAll("td")
     .data(function(row) {
         return columns.map(function(column) {
-            return {column: column, value: row[column]};
+            return {column: column, value: row[column], stateAbbr: row["ABBR"]};
         });
     })
     .enter()
@@ -64,26 +68,44 @@ function showInfo(data) {
     .text(function(d) { 
         if (d.value != ''){
             if (d.value != "X") return d.value;}
-         })
+        })
     .attr("class", function(d){
-       if( d.value == "X"){
-           return "yes";
-       }
-       else if (d.value == ""){
-           return "no";
-       }
-       else{
-           return "rowLabel";
-       }
-   })
+     if( d.value == "X"){
+         return "yes";
+     }
+     else if (d.value == ""){
+         return "no";
+     }
+     else{
+         return "rowLabel";
+     }
+ })
+    .on("mouseenter", function(d){
+      // console.log(d.stateAbbr + " " + d.column); 
+      var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr)
+      .classed( "mapYesSelected", true)
+// console.log(thisMapState)
+})
 
-$(".rowLabel").wrapInner("<span class='stateName'></span>");
+    .on("mouseleave", function(d){
+      // console.log(d.stateAbbr + " " + d.column); 
+      var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr)
+      .classed("mapYesSelected", false)
+
+  })
+
+    $(".rowLabel").wrapInner("<span class='stateName'></span>");
+
+
+    $(".map-cell").addClass(function(index ) {
+      return(columnList[index]);
+  });
 
     return table;
 }
 
 // render the table
-var stateTable = tabulate(data, ["State", "passed",    "proposedOrPending" ,  "CreatesRecommendsaStudyGroupPilotProgram"  ,  "AddressesWiretappingPrivacyIssues"  , "DictatesWhereCamerasCanGoBeTurnedOnandOff"  , "PresumptivelyShieldsFootagefromPublicDisclosure" ,"AddressesRedactions" ,"AddressesStageandTimethatFootageMustbeKept"]);
+var stateTable = tabulate(data, columnList);
 
 
 
@@ -91,12 +113,6 @@ function redraw(w, h){
 //map stuff
 
 d3.selectAll("svg").remove();
-
-            //Width and height
-            // var w = 160;
-            // var h = 100;
-            // var viewbox = "0 0 160 100";
-            // var preserveAspectRatio="xMidYMin"
 
             //Define map projection
             var projection = d3.geo.albersUsa()
@@ -122,6 +138,7 @@ d3.selectAll("svg").remove();
             .data(data)
             .attr("class", "responsiveMap")
             .attr("id", function(d,i){
+                // console.log(d);
                 return "map"+i;
             });
 
@@ -184,20 +201,18 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
-                        //Get data value
-                        if (d.properties.value){
-                            var value = d.properties.value.passed;
-
-                            if (value) {
-                                //If value exists…
-                                return "#1696d2";
-                            } else {
-                                //If value is undefined…
-                                return "#eee";
-                            }
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"passed"}})
+                .attr("class", function(d){
+                    if (d.properties.value){
+                        var value = d.properties.value.passed;
+                        if (value) {
+                            return "mapYes " + d.properties.value.ABBR +" mapState "+"passed";
+                        } else {
+                            return "mapNo " + d.properties.value.ABBR +" mapState "+"passed";
                         }
-                    });
+                    }
+                })
+                
 
                 //Bind data and create one path per GeoJSON feature
                 map2.selectAll("path")
@@ -205,17 +220,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"proposedOrPending"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.proposedOrPending;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"proposedOrPending";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"proposedOrPending";
                             }
                         }
                     });
@@ -227,17 +240,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"CreatesRecommendsaStudyGroupPilotProgram"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.CreatesRecommendsaStudyGroupPilotProgram;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"CreatesRecommendsaStudyGroupPilotProgram";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"CreatesRecommendsaStudyGroupPilotProgram";
                             }
                         }
                     });
@@ -248,17 +259,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesWiretappingPrivacyIssues"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.AddressesWiretappingPrivacyIssues;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"AddressesWiretappingPrivacyIssues";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"AddressesWiretappingPrivacyIssues";
                             }
                         }
                     });
@@ -269,17 +278,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhereCamerasCanGoBeTurnedOnandOff"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.DictatesWhereCamerasCanGoBeTurnedOnandOff;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"DictatesWhereCamerasCanGoBeTurnedOnandOff";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"DictatesWhereCamerasCanGoBeTurnedOnandOff";
                             }
                         }
                     });
@@ -290,17 +297,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"PresumptivelyShieldsFootagefromPublicDisclosure"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.PresumptivelyShieldsFootagefromPublicDisclosure;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"PresumptivelyShieldsFootagefromPublicDisclosure";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"PresumptivelyShieldsFootagefromPublicDisclosure";
                             }
                         }
                     });
@@ -311,17 +316,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesRedactions"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.AddressesRedactions;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"AddressesRedactions";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"AddressesRedactions";
                             }
                         }
                     });
@@ -332,17 +335,15 @@ d3.selectAll("svg").remove();
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .style("fill", function(d) {
+                // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesStageandTimethatFootageMustbeKept"}})
+                .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value){
                             var value = d.properties.value.AddressesStageandTimethatFootageMustbeKept;
-
                             if (value) {
-                                //If value exists…
-                                return "#1696d2";
+                                return "mapYes " + d.properties.value.ABBR +" mapState "+"AddressesStageandTimethatFootageMustbeKept";
                             } else {
-                                //If value is undefined…
-                                return "#eee";
+                                return "mapNo " + d.properties.value.ABBR +" mapState "+"AddressesStageandTimethatFootageMustbeKept";
                             }
                         }
                     });

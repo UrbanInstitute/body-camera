@@ -5,16 +5,39 @@ html{
 	height: 100%;
 	font-size: 16px;
 }
+.mapState{
+	stroke: 16px;
+}
+
+.mapYes{
+	fill:#1696d2;
+}
+.mapNo{
+	fill:#eee;
+}
+
+.mapYesSelected {
+    stroke-width: 2;
+    stroke: #efbf11;
+    fill:#efbf11 !important;
+}
+.mapNoSelected {
+    stroke-width: 2;
+    stroke: #000;
+    fill:#000 !important;
+}
 
 .yes{
 	background-color:#1696d2;
 	fill:#1696d2;
+	border-radius: 10px;
 }
 .yes:hover{
 	background-color:#fdbf11;
 }
 .no{
-	background-color:#efeeee;
+	border-radius: 10px;
+	background-color:#eee;
 }
 .highlighted{
 	background-color:#fdbf11;
@@ -23,7 +46,7 @@ table{
 	font-size: 12px;
 }
 td{
-	border: 1px solid #fff;
+	border: 2px solid #fff;
 	padding-left: 2px;
 	padding-right: 2px;
 	min-width: 25px;
@@ -37,7 +60,12 @@ th{
 	text-align: center;
 	max-width: 170px;
 	font-size: 14px;
+	background-color: #fff;
 	/*height: 200px;*/
+}
+
+thead{
+	background-color: #fff;
 }
 
 tr:hover > .rowLabel *{
@@ -50,6 +78,7 @@ tr:hover > .rowLabel *{
 .rowLabel{
 	width: auto;
 	white-space: nowrap;
+	line-height: 14px;
 }
 
 .map-cell{
@@ -107,6 +136,7 @@ tr:hover > .rowLabel *{
 	opacity: 0.4;
 	position: relative;
 	left: -15%;
+	top: -40px;
 	overflow: hidden;
 }
 #intro-gradient{
@@ -121,6 +151,21 @@ tr:hover > .rowLabel *{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
 }
+
+/*fixed header*/
+
+.fixed{
+  top:0;
+  position:fixed;
+  width:auto;
+  display:none;
+  border:none;
+}
+
+.scrollMore{
+  margin-top:600px;
+}
+
 
 @media(min-width:768px) {
 	.intro {
