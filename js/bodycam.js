@@ -19,7 +19,6 @@ var promise = new Promise(function(resolve, reject) {
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].pass, data[1].Name, data[2].Name ].join(", ");
 
         //last updated
-         // console.log(data[0].DateUpdated);
          document.getElementById("date").innerHTML = "Data last updated " + data[0].DateUpdated;
         // The table generation function
         function tabulate(data, columns) {
@@ -52,7 +51,8 @@ var promise = new Promise(function(resolve, reject) {
                         return {
                             column: column,
                             value: row[column],
-                            stateAbbr: row["ABBR"]
+                            stateAbbr: row["ABBR"],
+                            link: row["pdfLink"]
                         };
                     });
                 }).enter().append("td").text(function(d) {
@@ -81,6 +81,10 @@ var promise = new Promise(function(resolve, reject) {
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
                     
                 })
+                .on("mousedown", function(d){
+                    // console.log(d.link);
+                    window.open(d.link);
+                })
                 $(".rowLabel").wrapInner("<span class='stateName'></span>");
                 $(".map-cell").addClass(function(index) {
                     return (columnList[index]);
@@ -92,7 +96,7 @@ var promise = new Promise(function(resolve, reject) {
 
         function redraw(w, h) {
             //map stuff
-            d3.selectAll("svg").remove();
+            d3.selectAll(".map-cell").select("svg").remove();
             //Define map projection
             var projection = d3.geo.albersUsa().scale([w * 1.3]).translate(
                     [w / 2, h / 2])
@@ -269,6 +273,37 @@ var promise = new Promise(function(resolve, reject) {
         $(window).on("resize", function() {
             redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height - 5)
         });
+
+        // tilemaps for small layouts
+        var color = d3.scale.ordinal()
+            .domain(["X", ""])
+            .range(["#1696d2", "#fdbf11", "#000"]);
+
+        drawTileMap(data, "tile1", "passed");
+        drawTileMap(data, "tile2", "proposedOrPending");
+        drawTileMap(data, "tile3", "CreatesRecommendsaStudyGroupPilotProgram");
+
+        function drawTileMap (data, thisMap, thisVariable) {
+            var rect = d3.select("#" + thisMap).selectAll("rect")
+                .data(data)
+                .enter().append("rect")
+
+            var rects = d3.select("#" + thisMap).selectAll("rect")
+                .data(data, function (d) {
+                    return d.ABBR;
+                })
+                .attr("class", function (d) {                       
+                    var value = d[thisVariable];
+                    if (value) {
+                        return "mapYes ";
+                    } else {
+                        return "mapNo ";
+                    }
+                });
+
+
+        }
+        // end small layouts
     }
     document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
     resolve(1)
