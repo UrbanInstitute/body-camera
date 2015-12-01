@@ -69,14 +69,14 @@ var promise = new Promise(function(resolve, reject) {
                     }
                 }).on("mouseenter", function(d) {
                     if($(this).hasClass("yes")){
-                    var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", true)}
+                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", true)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
                     
                 })
                 .on("mouseleave", function(d) {
                     if($(this).hasClass("yes")){
-                    var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", false)}
+                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", false)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
                     
@@ -280,28 +280,101 @@ var promise = new Promise(function(resolve, reject) {
             //     var thisStateName = d.stateName;
             //     return thisStateName;
             // })
-            stateName = stateList.append("div").attr("class", "stateName");
-            stateName.selectAll("stateName")
-            .data(data, function(d){
-                // console.log(d.State)
-                return d;
-            })
-            stateName.append("h2")
+
+            stateList.append("h2")
             .html(function (d){
                     return d.State;
                 })
+            .attr("class", "state-name")
 
-            stateStats = stateList.append("div").attr("class", "stateStats");
-            stateStats.selectAll("stateStats")
-                .data(data, function(d, i){
-                 console.log(d)
-                return d;
+            stateList.append("div")
+            .html("Passed")
+            .attr("class", function(d){
+                var value = d.passed;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
             })
-                stateStats.append("div")
-                .attr("class", "statItem")
+
+            stateList.append("div")
+            .html("Proposed or Pending")
+            .attr("class", function(d){
+                var value = d.proposedOrPending;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Creates or Recommends a Study Group Pilot Program")
+            .attr("class", function(d){
+                var value = d.CreatesRecommendsaStudyGroupPilotProgram;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Addresses Wiretapping Privacy Issues")
+            .attr("class", function(d){
+                var value = d.AddressesWiretappingPrivacyIssues;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Dictates Where Cameras Can Go and if They Can Be Turned On and Off")
+            .attr("class", function(d){
+                var value = d.DictatesWhereCamerasCanGoBeTurnedOnandOff;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Presumptively Shields Footage from Public Disclosure")
+            .attr("class", function(d){
+                var value = d.PresumptivelyShieldsFootagefromPublicDisclosure;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
 
 
+            stateList.append("div")
+            .html("Addresses Redactions")
+            .attr("class", function(d){
+                var value = d.AddressesRedactions;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
 
+            stateList.append("div")
+            .html("Addresses Stageand Time That Footage Must be Kept")
+            .attr("class", function(d){
+                var value = d.AddressesStageandTimethatFootageMustbeKept;
+                if (value == "X"){
+                    return "list-item list-yes";
+                }else{
+                    return "list-item list-no"
+                }
+            })
 
 
         // tilemaps for small layouts
@@ -336,8 +409,25 @@ var promise = new Promise(function(resolve, reject) {
                     }
                 });
 
-
         }
+
+        stateBtn = d3.select("#state-btn")
+            .on("mousedown", function(){
+                var thisBtn = d3.select("#state-btn").classed("btn-active", true);
+                var thatBtn = d3.select("#national-btn").classed("btn-active", false);
+
+                var stateTable = d3.select("#list-section").classed("mobile-hide", false).classed("mobile-show", true);
+                var natMaps = d3.select("#tile-map-section").classed("mobile-hide", true).classed("mobile-show", false);
+
+             }) 
+        nationalBtn = d3.select("#national-btn")
+            .on("mousedown", function(){
+                var thisBtn = d3.select("#state-btn").classed("btn-active", false);
+                var thatBtn = d3.select("#national-btn").classed("btn-active", true);
+
+                               var stateTable = d3.select("#list-section").classed("mobile-hide", true).classed("mobile-show", false);
+                var natMaps = d3.select("#tile-map-section").classed("mobile-hide", false).classed("mobile-show", true);
+            }) 
         // end small layouts
     }
     document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");

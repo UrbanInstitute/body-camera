@@ -195,8 +195,41 @@ tr:hover > .rowLabel *{
 }
 
 
+.list-item{
+	min-height: 45px;
+	padding-left: 50px;
+	width: 100%;
+	font-size: 14px;
+	/*line-height: 45px;*/
+	padding-top: 12px;
+	margin-bottom: 2px;
+}
+.list-yes{
+	color: #fff;
+    background-color: #1696d2;
+    background-image: url(../img/icons-07.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+.list-no{
+	color: #000;
+    background-color: #eee;
+    background-image: url(../img/icons-08.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+
+.state-list-state h2{
+	margin-top:15px;
+}
+.mobile-show{
+	display: block;
+}
+.mobile-hide{
+	display: none;
+}
 @media(max-width:768px){
-	#tile-map-section{
+	#mobile{
 		display: block;
 	}
 	#body-cam{
@@ -226,7 +259,7 @@ tr:hover > .rowLabel *{
 	.intro .intro-body .intro-text {
 		font-size: 1.2em;
 	}
-		#tile-map-section{
+	#mobile{
 		display: none;
 	}
 }
