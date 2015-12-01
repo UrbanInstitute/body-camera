@@ -24,7 +24,7 @@ var promise = new Promise(function(resolve, reject) {
         function tabulate(data, columns) {
                 var table = d3.select("#body-cam").append("table").style("border-collapse", "collapse") // <= Add this line in
                     .attr("id", "body-cam-table").attr("class", "floatThead-table")
-                thead = table.append("thead"),
+                    thead = table.append("thead"),
                     tbody = table.append("tbody");
                 // append the header row
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").text(function(column) {
@@ -182,7 +182,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map3.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"CreatesRecommendsaStudyGroupPilotProgram"}})
                     .attr("class", function(d) {
@@ -196,7 +195,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map4.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesWiretappingPrivacyIssues"}})
                     .attr("class", function(d) {
@@ -210,7 +208,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map5.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhereCamerasCanGoBeTurnedOnandOff"}})
                     .attr("class", function(d) {
@@ -224,7 +221,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map6.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"PresumptivelyShieldsFootagefromPublicDisclosure"}})
                     .attr("class", function(d) {
@@ -238,7 +234,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map7.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesRedactions"}})
                     .attr("class", function(d) {
@@ -252,7 +247,6 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                //Bind data and create one path per GeoJSON feature
                 map8.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesStageandTimethatFootageMustbeKept"}})
                     .attr("class", function(d) {
@@ -273,6 +267,42 @@ var promise = new Promise(function(resolve, reject) {
         $(window).on("resize", function() {
             redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height - 5)
         });
+
+
+        // state by state lists for small layouts
+        // for each row, add text for each category. then shade/color based on value of row/column.
+        var stateList = d3.select("#list-section").selectAll(".state-list-state").append("div")
+            .data(data)
+            .enter()
+            .append("div")
+            .attr("class", "state-list-state ")
+            // .attr("class", function (d){
+            //     var thisStateName = d.stateName;
+            //     return thisStateName;
+            // })
+            stateName = stateList.append("div").attr("class", "stateName");
+            stateName.selectAll("stateName")
+            .data(data, function(d){
+                // console.log(d.State)
+                return d;
+            })
+            stateName.append("h2")
+            .html(function (d){
+                    return d.State;
+                })
+
+            stateStats = stateList.append("div").attr("class", "stateStats");
+            stateStats.selectAll("stateStats")
+                .data(data, function(d, i){
+                 console.log(d)
+                return d;
+            })
+                stateStats.append("div")
+                .attr("class", "statItem")
+
+
+
+
 
         // tilemaps for small layouts
         var color = d3.scale.ordinal()
@@ -314,9 +344,6 @@ var promise = new Promise(function(resolve, reject) {
     resolve(1)
 })
 promise.then(function(result) {
-    console.log("hey, i'm in promise land");
-    // adding filler rows
-
     setTimeout(function(){  $('#body-cam-table').stickyTableHeaders({fixedOffset:50}); }, 3000)
     
 })

@@ -209,7 +209,8 @@ tr:hover > .rowLabel *{
 		height: inherit;
 	}
 	.intro{
-		background: url(../img/background.jpg) no-repeat bottom center scroll;
+		background: url(http://binaryapi.ap.org/740f8e2e2dc64c3a8f2e8ed5d1331c68/preview/AP337599129098.jpg?wm=api&ver=0) no-repeat center center scroll;
+		background-size: cover;
 	}
 }
 @media(min-width:768px) {
