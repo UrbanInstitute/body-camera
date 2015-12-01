@@ -98,666 +98,1777 @@
                 <div id="date"></div>
 
                 <!-- for small layouts only -->
-                <h2>Passed</h2>
-                <svg version="1.1" class="tilemap" id="tile1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
-                        <defs xmlns="http://www.w3.org/1999/xhtml">
-                            <style type="text/css">
-                                <![CDATA[ #nameplate {
-                                    padding-bottom: 40px;
-                                }
-                                
-                                ]]>
-                            </style>
-                        </defs>
-                        <g transform="translate(29.25,29.25)">
-                            <g>
-                                <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
-                            </g>
-                            <g>
-                                <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
-                            </g>
-                            <g>
-                                <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
-                            </g>
-                            <g>
-                                <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
-                            </g>
-                            <g>
-                                <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
-                            </g>
-                            <g>
-                                <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
-                            </g>
-                            <g>
-                                <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
-                            </g>
-                            <g>
-                                <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
-                            </g>
-                            <g>
-                                <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
-                            </g>
-                            <g>
-                                <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
-                            </g>
-                            <g>
-                                <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
-                            </g>
-                            <g>
-                                <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
-                            </g>
+                <div id="mobile">
+                    <div class="btn-group" id="mobile-btns" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary">State-by-state</button>
+                      <button type="button" class="btn btn-secondary btn-active">National Overview</button>
+                    </div>
+                    <div id="list-section">
+                    </div>
+                        <div id="tile-map-section">
+                            <h2>Passed</h2>
+                            <svg version="1.1" class="tilemap" id="tile1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
 
-                            <g>
-                                <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
-                            </g>
-                            <g>
-                                <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
-                            </g>
-                            <g>
-                                <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
-                            </g>
-                            <g>
-                                <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
-                            </g>
-                            <g>
-                                <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
-                            </g>
-                            <g>
-                                <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
-                            </g>
-                            <g>
-                                <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
-                            </g>
-                            <g>
-                                <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
-                            </g>
-                            <g>
-                                <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
-                            </g>
-                            <g>
-                                <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
-                            </g>
-                            <g>
-                                <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
-                            </g>
-                            <g>
-                                <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
-                            </g>
-                            <g>
-                                <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
-                            </g>
-                            <g>
-                                <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
-                            </g>
-                            <g>
-                                <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
-                            </g>
-                            <g>
-                                <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
-                            </g>
-                            <g>
-                                <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
-                            </g>
-                            <g>
-                                <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
-                            </g>
-                            <g>
-                                <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
-                            </g>
-                            <g>
-                                <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
-                            </g>
-                            <g>
-                                <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
-                            </g>
-                            <g>
-                                <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
-                            </g>
-                            <g>
-                                <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
-                            </g>
-                            <g>
-                                <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
-                            </g>
-                            <g>
-                                <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
-                            </g>
-                            <g>
-                                <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
-                            </g>
-                            <g>
-                                <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
-                            </g>
-                            <g>
-                                <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
-                            </g>
-                            <g>
-                                <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
-                            </g>
-                            <g>
-                                <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
-                            </g>
-                            <g>
-                                <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
-                            </g>
-                            <g>
-                                <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
-                            </g>
-                            <g>
-                                <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
-                            </g>
-                            <g>
-                                <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
-                            </g>
-                            <g>
-                                <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
-                            </g>
-                            <g>
-                                <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
-                            </g>
-                            <g>
-                                <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
-                            </g>
-                            <g>
-                                <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
-                            </g>
-                            <g>
-                                <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
-                            </g>
-                        </g>
-                    </svg>
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
 
-                    <h2>Proposed or Pending</h2>
-                <svg version="1.1" class="tilemap" id="tile2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
-                        <defs xmlns="http://www.w3.org/1999/xhtml">
-                            <style type="text/css">
-                                <![CDATA[ #nameplate {
-                                    padding-bottom: 40px;
-                                }
-                                
-                                ]]>
-                            </style>
-                        </defs>
-                        <g transform="translate(29.25,29.25)">
-                            <g>
-                                <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
-                            </g>
-                            <g>
-                                <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
-                            </g>
-                            <g>
-                                <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
-                            </g>
-                            <g>
-                                <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
-                            </g>
-                            <g>
-                                <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
-                            </g>
-                            <g>
-                                <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
-                            </g>
-                            <g>
-                                <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
-                            </g>
-                            <g>
-                                <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
-                            </g>
-                            <g>
-                                <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
-                            </g>
-                            <g>
-                                <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
-                            </g>
-                            <g>
-                                <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
-                            </g>
-                            <g>
-                                <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
-                            </g>
+                            <h2>Proposed or Pending</h2>
+                            <svg version="1.1" class="tilemap" id="tile2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
 
-                            <g>
-                                <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
-                            </g>
-                            <g>
-                                <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
-                            </g>
-                            <g>
-                                <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
-                            </g>
-                            <g>
-                                <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
-                            </g>
-                            <g>
-                                <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
-                            </g>
-                            <g>
-                                <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
-                            </g>
-                            <g>
-                                <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
-                            </g>
-                            <g>
-                                <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
-                            </g>
-                            <g>
-                                <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
-                            </g>
-                            <g>
-                                <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
-                            </g>
-                            <g>
-                                <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
-                            </g>
-                            <g>
-                                <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
-                            </g>
-                            <g>
-                                <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
-                            </g>
-                            <g>
-                                <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
-                            </g>
-                            <g>
-                                <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
-                            </g>
-                            <g>
-                                <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
-                            </g>
-                            <g>
-                                <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
-                            </g>
-                            <g>
-                                <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
-                            </g>
-                            <g>
-                                <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
-                            </g>
-                            <g>
-                                <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
-                            </g>
-                            <g>
-                                <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
-                            </g>
-                            <g>
-                                <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
-                            </g>
-                            <g>
-                                <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
-                            </g>
-                            <g>
-                                <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
-                            </g>
-                            <g>
-                                <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
-                            </g>
-                            <g>
-                                <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
-                            </g>
-                            <g>
-                                <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
-                            </g>
-                            <g>
-                                <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
-                            </g>
-                            <g>
-                                <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
-                            </g>
-                            <g>
-                                <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
-                            </g>
-                            <g>
-                                <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
-                            </g>
-                            <g>
-                                <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
-                            </g>
-                            <g>
-                                <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
-                            </g>
-                            <g>
-                                <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
-                            </g>
-                            <g>
-                                <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
-                            </g>
-                            <g>
-                                <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
-                            </g>
-                            <g>
-                                <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
-                            </g>
-                            <g>
-                                <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
-                            </g>
-                            <g>
-                                <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
-                            </g>
-                        </g>
-                    </svg>
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
 
-                                        <h2>Creates or Recommends a Study Group Pilot Program</h2>
-                <svg version="1.1" class="tilemap" id="tile3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
-                        <defs xmlns="http://www.w3.org/1999/xhtml">
-                            <style type="text/css">
-                                <![CDATA[ #nameplate {
-                                    padding-bottom: 40px;
-                                }
-                                
-                                ]]>
-                            </style>
-                        </defs>
-                        <g transform="translate(29.25,29.25)">
-                            <g>
-                                <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
-                            </g>
-                            <g>
-                                <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
-                            </g>
-                            <g>
-                                <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
-                            </g>
-                            <g>
-                                <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
-                            </g>
-                            <g>
-                                <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
-                            </g>
-                            <g>
-                                <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
-                            </g>
-                            <g>
-                                <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
-                            </g>
-                            <g>
-                                <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
-                            </g>
-                            <g>
-                                <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
-                            </g>
-                            <g>
-                                <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
-                            </g>
-                            <g>
-                                <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
-                            </g>
-                            <g>
-                                <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
-                            </g>
+                            <h2>Creates or Recommends a Study Group Pilot Program</h2>
+                            <svg version="1.1" class="tilemap" id="tile3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
 
-                            <g>
-                                <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
-                            </g>
-                            <g>
-                                <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
-                            </g>
-                            <g>
-                                <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
-                            </g>
-                            <g>
-                                <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
-                            </g>
-                            <g>
-                                <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
-                            </g>
-                            <g>
-                                <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
-                            </g>
-                            <g>
-                                <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
-                            </g>
-                            <g>
-                                <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
-                            </g>
-                            <g>
-                                <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
-                            </g>
-                            <g>
-                                <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
-                            </g>
-                            <g>
-                                <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
-                            </g>
-                            <g>
-                                <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
-                            </g>
-                            <g>
-                                <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
-                            </g>
-                            <g>
-                                <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
-                            </g>
-                            <g>
-                                <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
-                            </g>
-                            <g>
-                                <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
-                            </g>
-                            <g>
-                                <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
-                            </g>
-                            <g>
-                                <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
-                            </g>
-                            <g>
-                                <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
-                            </g>
-                            <g>
-                                <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
-                            </g>
-                            <g>
-                                <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
-                            </g>
-                            <g>
-                                <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
-                            </g>
-                            <g>
-                                <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
-                            </g>
-                            <g>
-                                <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
-                            </g>
-                            <g>
-                                <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
-                            </g>
-                            <g>
-                                <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
-                            </g>
-                            <g>
-                                <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
-                            </g>
-                            <g>
-                                <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
-                            </g>
-                            <g>
-                                <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
-                            </g>
-                            <g>
-                                <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
-                            </g>
-                            <g>
-                                <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
-                            </g>
-                            <g>
-                                <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
-                            </g>
-                            <g>
-                                <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
-                            </g>
-                            <g>
-                                <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
-                            </g>
-                            <g>
-                                <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
-                            </g>
-                            <g>
-                                <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
-                            </g>
-                            <g>
-                                <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
-                            </g>
-                            <g>
-                                <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
-                            </g>
-                            <g>
-                                <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
-                                <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
-                            </g>
-                        </g>
-                    </svg>
-                <!-- end small layouts -->
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            <h2>Addresses Wiretapping Privacy Issues</h2>
+                            <svg version="1.1" class="tilemap" id="tile4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            <h2>Dictates Where Cameras Can Go and if They Can Be Turned On and Off</h2>
+                            <svg version="1.1" class="tilemap" id="tile5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            <h2>Presumptively Shields Footage from Public Disclosure</h2>
+                            <svg version="1.1" class="tilemap" id="tile6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            <h2>Addresses Redactions</h2>
+                            <svg version="1.1" class="tilemap" id="tile7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            <h2>Addresses Stageand Time That Footage Must be Kept</h2>
+                            <svg version="1.1" class="tilemap" id="tile8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+                        </div> <!-- end tile maps -->
+                </div> <!-- end mobile -->
+
+                
         </div>
     </div>
 <!-- text -->

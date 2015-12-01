@@ -174,7 +174,44 @@ tr:hover > .rowLabel *{
   margin-top:600px;
 }
 
+#mobile-btns{
+	width: 100%;
+}
 
+.btn-secondary{
+	width: 50%;
+	border-radius: 0;
+	background: #000;
+	color: #fff;
+}
+.btn-secondary:hover{
+	color: #ccc;
+}
+.btn-active{
+	background-color:#fdbf11;
+}
+.btn-active:hover{
+	color:#000;
+}
+
+
+@media(max-width:768px){
+	#tile-map-section{
+		display: block;
+	}
+	#body-cam{
+		display: none;
+	}
+	#intro-video{
+		display: none;
+	}
+	#intro-container{
+		height: inherit;
+	}
+	.intro{
+		background: url(../img/background.jpg) no-repeat bottom center scroll;
+	}
+}
 @media(min-width:768px) {
 	.intro {
 		height: 100%;
@@ -187,6 +224,9 @@ tr:hover > .rowLabel *{
 
 	.intro .intro-body .intro-text {
 		font-size: 1.2em;
+	}
+		#tile-map-section{
+		display: none;
 	}
 }
 

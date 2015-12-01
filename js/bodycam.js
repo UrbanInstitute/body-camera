@@ -282,6 +282,11 @@ var promise = new Promise(function(resolve, reject) {
         drawTileMap(data, "tile1", "passed");
         drawTileMap(data, "tile2", "proposedOrPending");
         drawTileMap(data, "tile3", "CreatesRecommendsaStudyGroupPilotProgram");
+        drawTileMap(data, "tile4", "AddressesWiretappingPrivacyIssues");
+        drawTileMap(data, "tile5", "DictatesWhereCamerasCanGoBeTurnedOnandOff");
+        drawTileMap(data, "tile6", "PresumptivelyShieldsFootagefromPublicDisclosure");
+        drawTileMap(data, "tile7", "AddressesRedactions");
+        drawTileMap(data, "tile8", "AddressesStageandTimethatFootageMustbeKept");
 
         function drawTileMap (data, thisMap, thisVariable) {
             var rect = d3.select("#" + thisMap).selectAll("rect")
