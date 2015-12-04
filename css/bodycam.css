@@ -65,6 +65,7 @@ th{
 	border: 1px solid #fff;
 	padding: 2px;
 	min-width: 40px;
+	width: 11%;
 	text-align: center;
 	max-width: 170px;
 	font-size: 14px;
@@ -90,9 +91,24 @@ tr:hover > .rowLabel *{
 }
 
 .map-cell{
-	/*width: 100px;*/
-	/*background-color: #fdbf11;*/
 	height: 100px;
+}
+
+.responsiveMap{
+	/*max-width: 100px;*/
+}
+
+.full-screen {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    background-size: cover;
+    opacity: 0.6;
 }
 
 #map0{

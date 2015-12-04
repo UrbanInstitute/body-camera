@@ -100,21 +100,17 @@ var promise = new Promise(function(resolve, reject) {
             //Define map projection
             var projection = d3.geo.albersUsa().scale([w * 1.3]).translate(
                     [w / 2, h / 2])
-                // .scale(1);
                 //Define path generator
             var path = d3.geo.path().projection(projection);
             //Define quantize scale to sort data values into buckets of color
             var color = d3.scale.quantize().range(["#1696d2", "#000"]);
             //Create SVG element
             var svg = d3.selectAll(".map-cell").append("svg").attr("width", w).attr("height", h)
-                // .attr("viewbox", viewbox)
-                // .attr("preserveAspectRatio", preserveAspectRatio)
                 .data(data).attr("class", "responsiveMap").attr("id", function(d, i) {
-                    // console.log(d);
                     return "map" + i;
                 });
             //responsive map stuff
-            var aspect = 160 / 100
+            var aspect = 1.6 / 1
                 // responsiveMap = $(".responsiveMap");
                 //Set input domain for color scale
             color.domain([
