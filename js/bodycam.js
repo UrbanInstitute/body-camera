@@ -428,6 +428,12 @@ var promise = new Promise(function(resolve, reject) {
                 var natMaps = d3.select("#tile-map-section").classed("mobile-hide", false).classed("mobile-show", true);
             }) 
         // end small layouts
+
+
+$(function () {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+});
     }
     document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
     resolve(1)
@@ -436,3 +442,4 @@ promise.then(function(result) {
     setTimeout(function(){  $('#body-cam-table').stickyTableHeaders({fixedOffset:50}); }, 3000)
     
 })
+

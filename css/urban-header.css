@@ -23,6 +23,11 @@
 .is-visible {
     top: 0px !important;
 }
+.is-below-header{
+top: 59px !important;
+    position: fixed !important;
+    z-index: 1000;
+}
 
 #header-pinned .content {
     height: 49px;

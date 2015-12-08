@@ -10,6 +10,9 @@ html{
 	height: 100%;
 	font-size: 16px;
 }
+
+
+
 .mapState{
 	stroke: 16px;
 }
@@ -117,6 +120,35 @@ tr:hover > .rowLabel *{
     opacity: 0.3;
 }
 
+.full-width-container{
+	position: absolute;
+	right: 0;
+	min-width: 100%;
+	height: auto;
+	background-color: #efefef;
+}
+
+.purple {
+  position: relative;
+  background: #663399;
+}
+
+.purple:before, 
+.purple:after {
+  content: "";
+  position: absolute;
+  background: #663399;  /* Match the background */
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+} 
+.purple:before {
+  right: 100%; 
+}
+.purple:after {
+  left: 100%;
+}
+
 .blocked{
 	    /*background: rgba(0,0,0,0.5);*/
     padding: 20px;
@@ -165,7 +197,6 @@ tr:hover > .rowLabel *{
 #intro-container{
 	position: absolute; z-index: -99; width: 100%; height: 100%;
 	background-color: #000;
-	background-image: url(http://newmediarockstars.com/wp-content/uploads/2015/01/TV-Static.gif);
 	background-size: cover;
 	background-blend-mode:overlay;
 	overflow: hidden;
@@ -278,6 +309,15 @@ tr:hover > .rowLabel *{
 	.full-screen{
 		display: none;
 	}
+
+	#sticky {
+
+}
+#sticky.stick {
+    position: fixed;
+    top: 60 !important;
+    z-index: 10000;
+}
 }
 @media(min-width:768px) {
 	.intro {
