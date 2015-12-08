@@ -430,16 +430,29 @@ var promise = new Promise(function(resolve, reject) {
         // end small layouts
 
 
-$(function () {
-    $(window).scroll(sticky_relocate);
-    sticky_relocate();
-});
+
     }
     document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
     resolve(1)
 })
 promise.then(function(result) {
-    setTimeout(function(){  $('#body-cam-table').stickyTableHeaders({fixedOffset:50}); }, 3000)
+    setTimeout(function(){  $('#body-cam-table').stickyTableHeaders({fixedOffset:50}); }, 3000);
+
+    //do some window width stuff
+    //if the window is small, remove body-cam div, save as a var
+
+    // $(window).on("resize", function() {
+    //     var w = window.innerWidth;
+    //     if (w <= 768){
+    //         var bodyCamTable = d3.select("#body-cam")
+    //         .remove();
+    //     }
+    // });
+
+    // savedElement will still contain the reference to the object,
+    // so for example, you can do:
+    // document.getElementById('container').appendChild(savedElement);
+// etc.
     
 })
 
