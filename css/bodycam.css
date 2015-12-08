@@ -1,6 +1,11 @@
 body{
 	height: 100%;
 }
+
+body :focus{
+	outline: none;
+}
+button:focus { outline:0 !important; }
 html{
 	height: 100%;
 	font-size: 16px;
@@ -30,14 +35,14 @@ html{
 .yes{
 	background-color:#1696d2;
 	fill:#1696d2;
-	border-radius: 10px;
-}
+/*	border-radius: 10px;
+*/}
 .yes:hover{
 	background-color:#fdbf11;
 }
 .no{
-	border-radius: 10px;
-	background-color:#eee;
+	/*border-radius: 10px;*/
+	background-color:#efefef;
 }
 .no:hover{
 	background-color: #ccc;
@@ -54,7 +59,7 @@ table{
 	font-size: 12px;
 }
 td{
-	border: 2px solid #fff;
+	border-left: 2px solid #fff;
 	padding-left: 2px;
 	padding-right: 2px;
 	min-width: 25px;
@@ -88,6 +93,7 @@ tr:hover > .rowLabel *{
 	width: auto;
 	white-space: nowrap;
 	line-height: 14px;
+	cursor: pointer;
 }
 
 .map-cell{
@@ -108,7 +114,12 @@ tr:hover > .rowLabel *{
     height: auto;
     z-index: 0;
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.3;
+}
+
+.blocked{
+	    /*background: rgba(0,0,0,0.5);*/
+    padding: 20px;
 }
 
 #map0{
@@ -154,6 +165,9 @@ tr:hover > .rowLabel *{
 #intro-container{
 	position: absolute; z-index: -99; width: 100%; height: 100%;
 	background-color: #000;
+	background-image: url(http://newmediarockstars.com/wp-content/uploads/2015/01/TV-Static.gif);
+	background-size: cover;
+	background-blend-mode:overlay;
 	overflow: hidden;
 }
 #intro-video{
@@ -260,6 +274,9 @@ tr:hover > .rowLabel *{
 	.intro{
 		background: url(http://binaryapi.ap.org/740f8e2e2dc64c3a8f2e8ed5d1331c68/preview/AP337599129098.jpg?wm=api&ver=0) no-repeat center center scroll;
 		background-size: cover;
+	}
+	.full-screen{
+		display: none;
 	}
 }
 @media(min-width:768px) {

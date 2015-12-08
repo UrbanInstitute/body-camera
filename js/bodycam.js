@@ -2,7 +2,7 @@ var promise = new Promise(function(resolve, reject) {
     window.onload = function() {
         init()
     };
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ePutuYZqgKWr7Z47cEfbHxCfpk4z5HoRoakYa8waR1E/pubhtml';
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/pubhtml';
     var columnList = ["State", "passed", "proposedOrPending", "CreatesRecommendsaStudyGroupPilotProgram", "AddressesWiretappingPrivacyIssues", "DictatesWhereCamerasCanGoBeTurnedOnandOff", "PresumptivelyShieldsFootagefromPublicDisclosure", "AddressesRedactions", "AddressesStageandTimethatFootageMustbeKept"];
 
     function init() {
@@ -82,8 +82,9 @@ var promise = new Promise(function(resolve, reject) {
                     
                 })
                 .on("mousedown", function(d){
-                    // console.log(d.link);
-                    window.open(d.link);
+                    if ($(this).hasClass("rowLabel")){
+                        window.open(d.link);
+                    }
                 })
                 $(".rowLabel").wrapInner("<span class='stateName'></span>");
                 $(".map-cell").addClass(function(index) {
@@ -91,6 +92,8 @@ var promise = new Promise(function(resolve, reject) {
                 });
                 return table;
             }
+
+        
             // render the table
         var stateTable = tabulate(data, columnList);
 
