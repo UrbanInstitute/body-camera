@@ -3,7 +3,7 @@ var promise = new Promise(function(resolve, reject) {
         init()
     };
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/pubhtml';
-    var columnList = ["State", "passed", "proposedOrPending", "CreatesRecommendsaStudyGroupPilotProgram", "AddressesWiretappingPrivacyIssues", "DictatesWhereCamerasCanGoBeTurnedOnandOff", "PresumptivelyShieldsFootagefromPublicDisclosure", "AddressesRedactions", "AddressesStageandTimethatFootageMustbeKept"];
+    var columnList = ["State", "passed", "proposedOrPending", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
         Tabletop.init({
@@ -29,13 +29,11 @@ var promise = new Promise(function(resolve, reject) {
                 // append the header row
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").text(function(column) {
                     if (column == "passed") return "Passed";
-                    if (column == "proposedOrPending") return "Proposed or Pending ";
-                    if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or Recommends a Study Group Pilot Program";
-                    if (column == "AddressesWiretappingPrivacyIssues") return "Addresses Wiretapping Privacy Issues";
-                    if (column == "DictatesWhereCamerasCanGoBeTurnedOnandOff") return "Dictates Where Cameras Can Go and if They Can Be Turned On and Off";
-                    if (column == "PresumptivelyShieldsFootagefromPublicDisclosure") return "Presumptively Shields Footage from Public Disclosure";
-                    if (column == "AddressesRedactions") return "Addresses Redactions";
-                    if (column == "AddressesStageandTimethatFootageMustbeKept") return "Addresses Stageand Time That Footage Must be Kept";
+                    if (column == "proposedOrPending") return "Proposed or pending ";
+                    if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot program";
+                    if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
+                    if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
+                    if (column == "PrescribesStorageTime") return "Prescribes video and storage time";
                 }).attr("class", "section-header");
                 // append the map row
                 thead.append("tr").selectAll("td").data(columns).enter().append("td").attr("class", function(d) {
@@ -199,24 +197,24 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.AddressesWiretappingPrivacyIssues;
+                            var value = d.properties.value.DictatesWhenWhereCamerasCanBeUsed;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "AddressesWiretappingPrivacyIssues";
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "AddressesWiretappingPrivacyIssues";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             }
                         }
                     });
                 map5.selectAll("path").data(json.features).enter().append("path").attr("d", path)
-                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhereCamerasCanGoBeTurnedOnandOff"}})
+                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhenWhereCamerasCanBeUsed"}})
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.DictatesWhereCamerasCanGoBeTurnedOnandOff;
+                            var value = d.properties.value.DictatesWhenWhereCamerasCanBeUsed;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "DictatesWhereCamerasCanGoBeTurnedOnandOff";
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhereCamerasCanGoBeTurnedOnandOff";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             }
                         }
                     });
@@ -225,37 +223,11 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.PresumptivelyShieldsFootagefromPublicDisclosure;
+                            var value = d.properties.value.PrescribesStorageTime;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "PresumptivelyShieldsFootagefromPublicDisclosure";
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "PrescribesStorageTime";
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "PresumptivelyShieldsFootagefromPublicDisclosure";
-                            }
-                        }
-                    });
-                map7.selectAll("path").data(json.features).enter().append("path").attr("d", path)
-                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesRedactions"}})
-                    .attr("class", function(d) {
-                        //Get data value
-                        if (d.properties.value) {
-                            var value = d.properties.value.AddressesRedactions;
-                            if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "AddressesRedactions";
-                            } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "AddressesRedactions";
-                            }
-                        }
-                    });
-                map8.selectAll("path").data(json.features).enter().append("path").attr("d", path)
-                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesStageandTimethatFootageMustbeKept"}})
-                    .attr("class", function(d) {
-                        //Get data value
-                        if (d.properties.value) {
-                            var value = d.properties.value.AddressesStageandTimethatFootageMustbeKept;
-                            if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "AddressesStageandTimethatFootageMustbeKept";
-                            } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "AddressesStageandTimethatFootageMustbeKept";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "PrescribesStorageTime";
                             }
                         }
                     });
@@ -333,7 +305,7 @@ var promise = new Promise(function(resolve, reject) {
             stateList.append("div")
             .html("Dictates Where Cameras Can Go and if They Can Be Turned On and Off")
             .attr("class", function(d){
-                var value = d.DictatesWhereCamerasCanGoBeTurnedOnandOff;
+                var value = d.DictatesWhenWhereCamerasCanBeUsed;
                 if (value == "X"){
                     return "list-item list-yes";
                 }else{
@@ -356,7 +328,7 @@ var promise = new Promise(function(resolve, reject) {
             stateList.append("div")
             .html("Addresses Redactions")
             .attr("class", function(d){
-                var value = d.AddressesRedactions;
+                var value = d.RestrictsPublicAccess;
                 if (value == "X"){
                     return "list-item list-yes";
                 }else{
@@ -367,7 +339,7 @@ var promise = new Promise(function(resolve, reject) {
             stateList.append("div")
             .html("Addresses Stageand Time That Footage Must be Kept")
             .attr("class", function(d){
-                var value = d.AddressesStageandTimethatFootageMustbeKept;
+                var value = d.PrescribesStorageTime;
                 if (value == "X"){
                     return "list-item list-yes";
                 }else{
@@ -385,10 +357,10 @@ var promise = new Promise(function(resolve, reject) {
         drawTileMap(data, "tile2", "proposedOrPending");
         drawTileMap(data, "tile3", "CreatesRecommendsaStudyGroupPilotProgram");
         drawTileMap(data, "tile4", "AddressesWiretappingPrivacyIssues");
-        drawTileMap(data, "tile5", "DictatesWhereCamerasCanGoBeTurnedOnandOff");
+        drawTileMap(data, "tile5", "DictatesWhenWhereCamerasCanBeUsed");
         drawTileMap(data, "tile6", "PresumptivelyShieldsFootagefromPublicDisclosure");
-        drawTileMap(data, "tile7", "AddressesRedactions");
-        drawTileMap(data, "tile8", "AddressesStageandTimethatFootageMustbeKept");
+        drawTileMap(data, "tile7", "RestrictsPublicAccess");
+        drawTileMap(data, "tile8", "PrescribesStorageTime");
 
         function drawTileMap (data, thisMap, thisVariable) {
             var rect = d3.select("#" + thisMap).selectAll("rect")
