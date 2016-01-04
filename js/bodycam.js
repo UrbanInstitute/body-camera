@@ -33,7 +33,7 @@ var promise = new Promise(function(resolve, reject) {
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot program";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
                     if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
-                    if (column == "PrescribesStorageTime") return "Prescribes video and storage time";
+                    if (column == "PrescribesStorageTime") return "Prescribes video storage time";
                 }).attr("class", "section-header");
                 // append the map row
                 thead.append("tr").selectAll("td").data(columns).enter().append("td").attr("class", function(d) {
@@ -404,7 +404,7 @@ var promise = new Promise(function(resolve, reject) {
 
 
     }
-    document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
+    $( "#copy-language" ).append( "<a target='_new' href='" + public_spreadsheet_url + "'>Download the data</a>");
     resolve(1)
 })
 promise.then(function(result) {
