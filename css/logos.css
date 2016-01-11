@@ -1,0 +1,95 @@
+.logo-page-list li {
+    margin-bottom: 40px;
+    list-style: none;
+}
+
+.logo-code {
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.header-u {
+    width: 34px;
+    height: 34px;
+    background: url(http://www.urban.org/sites/all/themes/urban/images/logo-mini-dark.png) no-repeat;
+    background-size: 34px 34px;
+}
+.logo{
+ display: block;   
+}
+.blue-white {
+    background: url(../img/urban_grid_blue_white.svg) no-repeat;
+}
+.blue-white-elevate{
+ background: url(../img/urban_grid_elevate_blue_white.svg) no-repeat;   
+}
+.black-white-elevate{
+ background: url(../img/urban_grid_elevate_black_white.svg) no-repeat;   
+}
+.blue-black {
+    background: url(../img/urban_grid_blue_rev.svg) no-repeat;
+}
+.blue-black-elevate{
+        background: url(../img/urban_grid_elevate_blue_black.svg) no-repeat;
+
+}
+.white-black {
+    background: url(../img/urban_grid_rev.svg) no-repeat;
+}
+
+.black-white{
+       background: url(../img/urban_grid_black.svg) no-repeat;
+}
+
+.white-black-elevate{
+           background: url(../img/urban_grid_elevate_white_black.svg) no-repeat;
+
+}
+
+.xsm {
+    width: 90px;
+    height: 54px;
+    background-size: 90px 54px;
+}
+.sm {
+    width: 150px;
+    height: 90px;
+    background-size: 150px 90px;
+}
+
+.md {
+    width: 240px;
+    height: 144px;
+    background-size: 240px 144px;
+}
+
+.lg {
+    width: 300px;
+    height: 175px;
+    background-size: 300px 175px;
+}
+
+
+.elevate-xsm {
+    width: 256px;
+    height: 54px;
+    background-size: 256px 54px;
+}
+.elevate-sm {
+    width: 425px;
+    height: 90px;
+    background-size: 425px 90px;
+}
+
+.elevate-md {
+    width: 680px;
+    height: 144px;
+    background-size: 680px 144px;
+}
+
+.elevate-lg {
+    width: 826px;
+    height: 175px;
+    background-size: 826px 175px;
+}

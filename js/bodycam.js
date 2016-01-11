@@ -2,6 +2,11 @@ var promise = new Promise(function(resolve, reject) {
     window.onload = function() {
         init()
     };
+
+    //to edit data, visit https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/edit?usp=sharing
+    //JPC will edit a different sheet, which is not live: https://docs.google.com/spreadsheets/d/1wShnyXTUYbu9LqkF6GG_dQeV70n4rqLNVsZwBNq8B-g/edit#gid=0
+    //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
+
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/pubhtml';
     var columnList = ["State", "passed", "proposedOrPending", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
