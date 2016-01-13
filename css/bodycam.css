@@ -11,12 +11,32 @@ html{
 	font-size: 16px;
 }
 
-
-
+#body-cam{
+	width: 96%;
+}
+.swatch{
+	width: 30px;
+	height: 15px;
+	margin-left: 20px;
+	margin-right: 5px;
+	display: inline-block;
+}
 .mapState{
 	stroke: 16px;
 }
 
+.left{
+	border-left: 1px solid #000;
+}
+.center{
+	border-top: 1px solid #000;
+}
+.right{
+	border-right: 1px solid #000;
+}
+.header-group{
+	height: 8px;
+}
 .mapYes{
 	fill:#1696d2;
 }
@@ -34,13 +54,17 @@ html{
     stroke: #000;
     fill:#000 !important;
 }
-
-.yes{
+.proposedpending{
+	background-color: #fdbf11;
+}
+.both{
+	background-color: #55b748;
+}
+.passed{
 	background-color:#1696d2;
 	fill:#1696d2;
-/*	border-radius: 10px;
-*/}
-.yes:hover{
+}
+.passed:hover{
 	background-color:#fdbf11;
 }
 .no{
@@ -281,7 +305,7 @@ footer {
 	padding-top: 12px;
 	margin-bottom: 2px;
 }
-.list-yes{
+.list-passed{
 	color: #fff;
     background-color: #1696d2;
     background-image: url(../img/icons-07.png);

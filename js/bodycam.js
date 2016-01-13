@@ -8,7 +8,7 @@ var promise = new Promise(function(resolve, reject) {
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
 
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/pubhtml';
-    var columnList = ["State", "passed", "proposedOrPending", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
+    var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
         Tabletop.init({
@@ -31,10 +31,25 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("id", "body-cam-table").attr("class", "floatThead-table")
                     thead = table.append("thead"),
                     tbody = table.append("tbody");
-                // append the header row
+                // append the header rows
+                thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("class", function(column){
+                    if (column == "audio") return "header-group left center";
+                    if (column == "allPartyConsent") return "header-group  center";
+                    if (column == "privatePlaces") return "header-group  center";
+                    if (column == "lawEnforcement") return "header-group right center";
+                    if (column == "CreatesRecommendsaStudyGroupPilotProgram")  return "header-group left center";
+                    if (column == "DictatesWhenWhereCamerasCanBeUsed")  return "header-group  center";
+                    if (column == "RestrictsPublicAccess") return  "header-group  center";
+                    if (column == "PrescribesStorageTime") return "header-group right center";
+                });
+
+
+                //header labels
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").text(function(column) {
-                    if (column == "passed") return "Passed";
-                    if (column == "proposedOrPending") return "Proposed or pending ";
+                    if (column == "audio") return "Allow the recording of audio";
+                    if (column == "allPartyConsent") return "Require all-party consent";
+                    if (column == "privatePlaces") return "Private places are off limits";
+                    if (column == "lawEnforcement") return "Law enforcement excemptions";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot program";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
                     if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
@@ -46,6 +61,9 @@ var promise = new Promise(function(resolve, reject) {
                         return "map-cell";
                     }
                 });
+
+
+
                 // create a row for each object in the data
                 var rows = tbody.selectAll("tr").data(data).enter().append("tr");
                 // create a cell in each row for each column
@@ -60,25 +78,28 @@ var promise = new Promise(function(resolve, reject) {
                     });
                 }).enter().append("td").text(function(d) {
                     if (d.value != '') {
-                        if (d.value != "X") return d.value;
+                        if (d.value != "passed" && d.value != "proposedpending" && d.value != "both") return d.value; //should only return stateNames
                     }
                 }).attr("class", function(d) {
-                    if (d.value == "X") {
-                        return "yes";
+                    if (d.value == "passed") {
+                        return "passed " + d.column;
+                    } else if (d.value == "proposedpending"){
+                        return "proposedpending " + d.column;
+                    } else if (d.value == "both"){
+                        return "both " + d.column;
                     } else if (d.value == "") {
-                        return "no";
+                        return "no " + d.column;
                     } else {
                         return "rowLabel";
                     }
                 }).on("mouseenter", function(d) {
-                    if($(this).hasClass("yes")){
+                    if($(this).hasClass("passed")){
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", true)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
-                    
                 })
                 .on("mouseleave", function(d) {
-                    if($(this).hasClass("yes")){
+                    if($(this).hasClass("passed")){
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", false)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
@@ -162,11 +183,11 @@ var promise = new Promise(function(resolve, reject) {
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"passed"}})
                     .attr("class", function(d) {
                         if (d.properties.value) {
-                            var value = d.properties.value.passed;
+                            var value = d.properties.value.audio;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "passed";
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "audio";
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "passed";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "audio";
                             }
                         }
                     })
@@ -176,15 +197,41 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.proposedOrPending;
+                            var value = d.properties.value.allPartyConsent;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "proposedOrPending";
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "allPartyConsent";
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "proposedOrPending";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "allPartyConsent";
                             }
                         }
                     });
-                map3.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                    map3.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"proposedOrPending"}})
+                    .attr("class", function(d) {
+                        //Get data value
+                        if (d.properties.value) {
+                            var value = d.properties.value.lawEnforcement;
+                            if (value) {
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
+                            } else {
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
+                            }
+                        }
+                    });
+                    map4.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"proposedOrPending"}})
+                    .attr("class", function(d) {
+                        //Get data value
+                        if (d.properties.value) {
+                            var value = d.properties.value.privatePlaces;
+                            if (value) {
+                                return "mapYes " + d.properties.value.ABBR + " mapState " + "privatePlaces";
+                            } else {
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "privatePlaces";
+                            }
+                        }
+                    });
+                map5.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"CreatesRecommendsaStudyGroupPilotProgram"}})
                     .attr("class", function(d) {
                         //Get data value
@@ -197,7 +244,7 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                map4.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                map6.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"AddressesWiretappingPrivacyIssues"}})
                     .attr("class", function(d) {
                         //Get data value
@@ -210,7 +257,7 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                map5.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                map7.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhenWhereCamerasCanBeUsed"}})
                     .attr("class", function(d) {
                         //Get data value
@@ -223,7 +270,7 @@ var promise = new Promise(function(resolve, reject) {
                             }
                         }
                     });
-                map6.selectAll("path").data(json.features).enter().append("path").attr("d", path)
+                map8.selectAll("path").data(json.features).enter().append("path").attr("d", path)
                     // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"PresumptivelyShieldsFootagefromPublicDisclosure"}})
                     .attr("class", function(d) {
                         //Get data value
