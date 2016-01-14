@@ -81,7 +81,7 @@
 
             <div id="intro-gradient"></div>
 
-        <div class="intro-body">
+        <div class="intro-body" style="margin-bottom:100px">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 blocked">
@@ -91,7 +91,7 @@
                         <h1 class="brand-heading">Police Body-Worn Cameras: Where Your State Stands</h1>
                         <p class="intro-text">Laws concerning body-worn cameras vary considerably by state. Use our legislation tracker to find out more about passed and pending policies in your state.</p>
 
-                        <a href="#body-cam" class="btn btn-circle page-scroll">
+                        <a href="#stateTable" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
@@ -100,22 +100,27 @@
         </div>
     </header>
 
-<div class="container quote-container">
-    <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
-        <div class="introQuote introQuoteIntro text-center">
-            Public support for police body-worn cameras has grown in the wake of several high-profile shooting deaths. Law enforcement agencies across the country have invested in cameras to improve accountability and transparency, but how and when they’re are used and whether the footage gets released is still up for debate.</div>
-<div class="introQuote text-center">
-“A lot hangs in those details,” said Nancy La Vigne, director of Urban Institute’s Justice Policy Center. “Those policies and practices can make the technology more or less powerful in terms of their intended impact. And there’s a high degree of variation among states.”
-</div>
-</div>
-</div>
-</div>
+    <!-- <div class="container quote-container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="introQuote introQuoteIntro text-center">
+                    Public support for police body-worn cameras has grown in the wake of several high-profile shooting deaths. Law enforcement agencies across the country have invested in cameras to improve accountability and transparency, but how and when they’re are used and whether the footage gets released is still up for debate.</div>
+                    <div class="introQuote text-center">
+                        “A lot hangs in those details,” said Nancy La Vigne, director of Urban Institute’s Justice Policy Center. <span class="textHighlight">“Those policies and practices can make the technology more or less powerful in terms of their intended impact.</span> And there’s a high degree of variation among states.”
+                    </div>
+                </div>
+            </div>
+        </div> -->
     
 
     <!--table content-->
-    <h1 class="text-center">State-by-state breakdown</h1>
-    <div id="key"><p class="text-center"><span class="swatch passed"></span>Apply to currently passed legislation <span class="swatch proposedpending"></span>Apply to proposed or pending legislation <span class="swatch both"></span>Both</p></div>
+    <div id="desktopTitle">
+        <h1 id="stateTable" class="text-center" >State-by-state breakdown</h1>
+        <p class="text-center"><em>Click a state name for more detail about specific statutes</em>
+            <div id="key"><p class="text-center"><span class="swatch passed"></span>Apply to currently passed legislation <span class="swatch proposedpending"></span>Apply to proposed or pending legislation <span class="swatch both"></span>Both</p></div>
+        </div>
+
+
 
     <div id="body-cam"></div>
 
@@ -127,6 +132,14 @@
 
                 <!-- for small layouts only -->
                 <div id="mobile">
+
+                    <div id="mobile-title">
+        <h1 id="stateTable" class="text-center" >State-by-state breakdown</h1>
+        <p class="text-center"><em>Click a state name for more detail about specific statutes</em>
+            <div id="key"><p class="text-center"><span class="swatch passed"></span>Apply to currently passed legislation <span class="swatch proposedpending"></span>Apply to proposed or pending legislation <span class="swatch both"></span>Both</p></div>
+        </div>
+
+
                     <div class="btn-group" id="mobile-btns" role="group" aria-label="Basic example">
                       <button type="button" id="state-btn" class="btn btn-secondary btn-active">State-by-state</button>
                       <button type="button" id="national-btn" class="btn btn-secondary ">National Overview</button>
@@ -134,7 +147,8 @@
                     <div id="list-section">
                     </div>
                         <div id="tile-map-section" class="mobile-hide">
-                            <h2>Passed</h2>
+                            <h5>Current Laws Concerning Video Surveillance</h5>
+                            <h2>Allow the recording of audio</h2>
                             <svg version="1.1" class="tilemap" id="tile1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -354,7 +368,8 @@
                                     </g>
                                 </svg>
 
-                            <h2>Proposed or Pending</h2>
+                            <h5>Current Laws Concerning Video Surveillance</h5>
+                            <h2>Require all-party consent</h2>
                             <svg version="1.1" class="tilemap" id="tile2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -573,8 +588,9 @@
                                         </g>
                                     </g>
                                 </svg>
+                            <h5>Current Laws Concerning Video Surveillance</h5>
 
-                            <h2>Creates or Recommends a Study Group or Pilot Program</h2>
+                            <h2>Private places are off limits</h2>
                             <svg version="1.1" class="tilemap" id="tile3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -795,8 +811,229 @@
                                 </svg>
 
                             
+                            <h5>Current Laws Concerning Video Surveillance</h5>
 
-                            <h2>Dictates Where and When Cameras Can Be Used</h2>
+                            <h2>Law enforcement excemptions</h2>
+                            <svg version="1.1" class="tilemap" id="tile4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+                            <h5>Laws Specific to Police Body-Worn Cameras</h5>
+                            <h2>Creates or recommends a study group or pilot program</h2>
                             <svg version="1.1" class="tilemap" id="tile5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -1016,7 +1253,10 @@
                                     </g>
                                 </svg>
 
-                            <h2>Restricts Public Access to Footage</h2>
+                            
+                            <h5>Laws Specific to Police Body-Worn Cameras</h5>
+
+                            <h2>Dictates where and when cameras can be used</h2>
                             <svg version="1.1" class="tilemap" id="tile6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -1236,9 +1476,233 @@
                                     </g>
                                 </svg>
 
-                            
 
-                            <h2>Prescribes Video and Storage Time</h2>
+                            <h5>Laws Specific to Police Body-Worn Cameras</h5>
+
+                            <h2>Restricts public access to footage</h2>
+                            <svg version="1.1" class="tilemap" id="tile7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
+                                    <defs xmlns="http://www.w3.org/1999/xhtml">
+                                        <style type="text/css">
+                                            <![CDATA[ #nameplate {
+                                                padding-bottom: 40px;
+                                            }
+                                            
+                                            ]]>
+                                        </style>
+                                    </defs>
+                                    <g transform="translate(29.25,29.25)">
+                                        <g>
+                                            <rect id="AL" fips="1" x="28.2" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.2009 422.8725)" class="st1 st2">AL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AK" fips="2" x="-130" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.6177 264.6225)" class="st1 st2">AK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AZ" fips="4" x="-103.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.4576 396.4975)" class="st1 st2">AZ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="AR" fips="5" x="-24.5" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -19.0002 396.4975)" class="st1 st2">AR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CA" fips="6" x="-130" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.3328 370.1225)" class="st1 st2">CA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CO" fips="8" x="-77.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.6422 370.1225)" class="st1 st2">CO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="CT" fips="9" x="107.4" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9374 343.7475)" class="st1 st2">CT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DE" fips="10" x="107.4" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.6425 370.1225)" class="st1 st2">DE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="DC" fips="11" x="81" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 85.8643 396.4975)" class="st1 st2">DC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="FL" fips="12" x="81" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.6543 449.2475)" class="st1 st2">FL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="GA" fips="13" x="54.6" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.7125 422.8725)" class="st1 st2">GA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="HI" fips="15" x="-130" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -123.8226 449.2475)" class="st1 st2">HI</text>
+                                        </g>
+
+                                        <g>
+                                            <rect id="ID" fips="16" x="-103.6" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -96.2374 317.3725)" class="st1 st2">ID</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IL" fips="17" x="1.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 9.7347 317.3725)" class="st1 st2">IL</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IN" fips="18" x="1.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 8.5253 343.7475)" class="st1 st2">IN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="IA" fips="19" x="-24.5" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -17.3151 343.7475)" class="st1 st2">IA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KS" fips="20" x="-50.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.0218 396.4975)" class="st1 st2">KS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="KY" fips="21" x="1.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2897 370.1225)" class="st1 st2">KY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="LA" fips="22" x="-24.5" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -18.3503 422.8725)" class="st1 st2">LA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ME" fips="23" x="133.8" y="249.4" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.5439 264.6225)" class="st1 st2">ME</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MD" fips="24" x="81" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 84.689 370.1225)" class="st1 st2">MD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MA" fips="25" x="107.4" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 111.3124 317.3725)" class="st1 st2">MA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MI" fips="26" x="28.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 34.0353 317.3725)" class="st1 st2">MI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MN" fips="27" x="-24.5" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.7602 317.3725)" class="st1 st2">MN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MS" fips="28" x="1.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 6.59 422.8725)" class="st1 st2">MS</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MO" fips="29" x="-24.5" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -20.9702 370.1225)" class="st1 st2">MO</text>
+                                        </g>
+                                        <g>
+                                            <rect id="MT" fips="30" x="-77.2" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -72.7772 317.3725)" class="st1 st2">MT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NE" fips="31" x="-50.9" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.6519 370.1225)" class="st1 st2">NE</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NV" fips="32" x="-103.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -98.1176 343.7475)" class="st1 st2">NV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NH" fips="33" x="133.8" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 138.4888 290.9975)" class="st1 st2">NH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NJ" fips="34" x="81" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 87.0542 343.7475)" class="st1 st2">NJ</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NM" fips="35" x="-77.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.6071 396.4975)" class="st1 st2">NM</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NY" fips="36" x="81" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 86.1294 317.3725)" class="st1 st2">NY</text>
+                                        </g>
+                                        <g>
+                                            <rect id="NC" fips="37" x="28.2" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.9655 396.4975)" class="st1 st2">NC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="ND" fips="38" x="-50.9" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.5118 317.3725)" class="st1 st2">ND</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OH" fips="39" x="28.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 32.4006 343.7475)" class="st1 st2">OH</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OK" fips="40" x="-50.9" y="407.7" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -46.3619 422.8725)" class="st1 st2">OK</text>
+                                        </g>
+                                        <g>
+                                            <rect id="OR" fips="41" x="-130" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -125.7178 343.7475)" class="st1 st2">OR</text>
+                                        </g>
+                                        <g>
+                                            <rect id="PA" fips="42" x="54.6" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.3268 343.7475)" class="st1 st2">PA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="RI" fips="44" x="133.8" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 141.2939 343.7475)" class="st1 st2">RI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SC" fips="45" x="54.6" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 60.7072 396.4975)" class="st1 st2">SC</text>
+                                        </g>
+                                        <g>
+                                            <rect id="SD" fips="46" x="-50.9" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.3819 343.7475)" class="st1 st2">SD</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TN" fips="47" x="1.9" y="381.3" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.1097 396.4975)" class="st1 st2">TN</text>
+                                        </g>
+                                        <g>
+                                            <rect id="TX" fips="48" x="-50.9" y="434.1" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -45.1319 449.2475)" class="st1 st2">TX</text>
+                                        </g>
+                                        <g>
+                                            <rect id="UT" fips="49" x="-103.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -97.5375 370.1225)" class="st1 st2">UT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VT" fips="50" x="107.4" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 112.9628 290.9975)" class="st1 st2">VT</text>
+                                        </g>
+                                        <g>
+                                            <rect id="VA" fips="51" x="54.6" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 59.9825 370.1225)" class="st1 st2">VA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WA" fips="53" x="-130" y="302.2" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -127.0032 317.3725)" class="st1 st2">WA</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WV" fips="54" x="28.2" y="354.9" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 31.6755 370.1225)" class="st1 st2">WV</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WI" fips="55" x="1.9" y="275.8" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 7.2101 290.9975)" class="st1 st2">WI</text>
+                                        </g>
+                                        <g>
+                                            <rect id="WY" fips="56" x="-77.2" y="328.6" class="st0" width="24.4" height="24.4" />
+                                            <text transform="matrix(1 0 0 1 -73.4672 343.7475)" class="st1 st2">WY</text>
+                                        </g>
+                                    </g>
+                                </svg>
+
+
+                            <h5>Laws Specific to Police Body-Worn Cameras</h5>
+
+                            <h2>Prescribes video storage time</h2>
                             <svg version="1.1" class="tilemap" id="tile8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-130 275.8 351 242.2" style="enable-background:new -130 275.8 351 242.2;" xml:space="preserve">
                                     <defs xmlns="http://www.w3.org/1999/xhtml">
                                         <style type="text/css">
@@ -1467,29 +1931,43 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Public support for police body-worn cameras has grown in the wake of several high-profile shooting deaths. Law enforcement agencies across the country have invested in cameras to improve accountability and transparency, but how and when they’re are used and whether the footage gets released is still up for debate.</h2>
-                <p>“A lot hangs in those details,” said Nancy La Vigne, director of Urban Institute’s Justice Policy Center. “Those policies and practices can make the technology more or less powerful in terms of their intended impact. And there’s a high degree of variation among states.”</em></p>
-                <p>
-                Lorem ipsum dolor sit amet, tempus neque etiam justo semper nulla in, phasellus error libero, vitae pede sodales commodo. Rhoncus senectus purus quam quis malesuada, a adipisci tristique placerat vel, mauris elit sed nam, sed dignissim faucibus mauris et, ut mollit donec. Vel curabitur elit fusce libero non turpis. Vitae felis ullamcorper tortor magnis faucibus, non et massa officia velit at, pellentesque nulla feugiat non donec quam pretium, nunc egestas vestibulum hymenaeos accumsan tortor, lectus pulvinar nulla. Eget donec id ridiculus class congue, nam tempor tortor blandit accumsan quis tellus. Amet ac, eget donec vestibulum bibendum eget felis, mattis amet dapibus vitae ullamcorper sem condimentum, sed in sociosqu id ligula diam, fringilla a harum dapibus nam. Ipsum quis urna arcu sed, mauris velit vitae mattis. Etiam eleifend quam mi, fuga placerat vivamus turpis, amet volutpat fermentum est, et suspendisse vivamus sodales non, at libero tempor in nonummy praesent mi.</p>
-                <p>
-                Dolor sapien aliquip, luctus vehicula integer maecenas, donec in eget, est mauris nisl at habitant nonummy. Nulla semper nulla aptent vel, diam suscipit, cras placerat auctor, maecenas nec aliquet est molestie sed mattis, mauris enim nibh id et hendrerit. Aliquam tristique, volutpat posuere in. Eros quam suscipit, lorem urna sollicitudin, integer convallis felis id nisl class, lorem id quis, vestibulum nascetur. Nec est ipsum sociis a gravida, metus nam. Sem sociosqu ligula, ante in. Lacinia turpis autem aliquam, vulputate est. Vulputate aenean at libero hendrerit nibh, consequat eu non suspendisse, sed nisl duis eget ultricies amet imperdiet.</p>
-                <p>
-                In et morbi eu gravida, mauris egestas, vitae vitae vulputate eu enim mauris, vivamus quisque vulputate nunc dolor pellentesque. Placerat in, vehicula eget sit ac amet consectetuer, eu faucibus lectus sociis elit morbi diam, pulvinar parturient nibh, placerat elementum sed magna. Sed purus mus fames molestie vel, orci bibendum turpis aliquam nec. Nec sodales nunc venenatis praesent nam, curabitur libero ac, cursus ac aenean varius sed, in non mauris pulvinar vel, sed justo ac risus neque urna sed. Ut nunc, et ac nulla vel pellentesque euismod. Imperdiet at at, sit eleifend sit lectus nunc gravida eu, eleifend scelerisque consequat neque integer, pharetra suscipit aliquam. Urna nisl ipsum.</p>
-                <p>
-                Nec lacinia sit penatibus sollicitudin amet ut, et dapibus, quis hac ipsum sodales, fringilla maecenas hac curabitur. Nulla rutrum purus amet blandit tempor maecenas, libero magna, amet nullam aliquet nonummy sit praesent vitae, nibh sit porta, at odio eleifend. Justo eget est, habitant ultricies dolor nulla donec. Non lacus metus sollicitudin laoreet amet. Neque vestibulum in curabitur wisi, eget mi nisi suspendisse est consequat vivamus, rutrum ut nulla, neque venenatis non congue malesuada auctor, lorem fringilla nunc mauris porta turpis. In ipsum viverra, quis erat, vitae sodales urna non. Mauris sem, posuere purus diam pede deserunt sociis urna, ac montes, dolor nec, sed libero.</p>
-                <p>
-                Neque risus nibh sagittis wisi, non viverra metus nibh elementum, congue phasellus a porttitor gravida mauris, arcu ligula sollicitudin a neque quis debitis. Id ut mi amet vitae a, dolor rem aenean sed tempus ac semper, tempus id elementum eget donec faucibus, lectus lacinia dui platea in diam, orci commodo a amet mattis augue morbi. Erat et arcu egestas proin sem pede, erat ex sed mauris lobortis, pede laudantium dui nec, sapien tellus, mauris in vivamus massa platea natoque proin. Parturient hymenaeos eget sed habitasse, orci pharetra vitae nunc nunc aliquam faucibus, varius et nullam lorem massa donec orci, vulputate ac quos magna urna sit, rerum at aliquam. Ac vitae sagittis. Nam ornare quis est quam et, nulla arcu id laoreet mauris tincidunt, vitae quam mauris tortor ipsum potenti luctus. Duis wisi vestibulum. Curabitur non montes orci amet, suscipit viverra pede tellus scelerisque, ligula tempor vel eros adipiscing. Consequat imperdiet phasellus sapien.</p>
-                <p>
-                <p>
-                Lorem ipsum dolor sit amet, tempus neque etiam justo semper nulla in, phasellus error libero, vitae pede sodales commodo. Rhoncus senectus purus quam quis malesuada, a adipisci tristique placerat vel, mauris elit sed nam, sed dignissim faucibus mauris et, ut mollit donec. Vel curabitur elit fusce libero non turpis. Vitae felis ullamcorper tortor magnis faucibus, non et massa officia velit at, pellentesque nulla feugiat non donec quam pretium, nunc egestas vestibulum hymenaeos accumsan tortor, lectus pulvinar nulla. Eget donec id ridiculus class congue, nam tempor tortor blandit accumsan quis tellus. Amet ac, eget donec vestibulum bibendum eget felis, mattis amet dapibus vitae ullamcorper sem condimentum, sed in sociosqu id ligula diam, fringilla a harum dapibus nam. Ipsum quis urna arcu sed, mauris velit vitae mattis. Etiam eleifend quam mi, fuga placerat vivamus turpis, amet volutpat fermentum est, et suspendisse vivamus sodales non, at libero tempor in nonummy praesent mi.</p>
-                <p>
-                Dolor sapien aliquip, luctus vehicula integer maecenas, donec in eget, est mauris nisl at habitant nonummy. Nulla semper nulla aptent vel, diam suscipit, cras placerat auctor, maecenas nec aliquet est molestie sed mattis, mauris enim nibh id et hendrerit. Aliquam tristique, volutpat posuere in. Eros quam suscipit, lorem urna sollicitudin, integer convallis felis id nisl class, lorem id quis, vestibulum nascetur. Nec est ipsum sociis a gravida, metus nam. Sem sociosqu ligula, ante in. Lacinia turpis autem aliquam, vulputate est. Vulputate aenean at libero hendrerit nibh, consequat eu non suspendisse, sed nisl duis eget ultricies amet imperdiet.</p>
-                <p>
-                In et morbi eu gravida, mauris egestas, vitae vitae vulputate eu enim mauris, vivamus quisque vulputate nunc dolor pellentesque. Placerat in, vehicula eget sit ac amet consectetuer, eu faucibus lectus sociis elit morbi diam, pulvinar parturient nibh, placerat elementum sed magna. Sed purus mus fames molestie vel, orci bibendum turpis aliquam nec. Nec sodales nunc venenatis praesent nam, curabitur libero ac, cursus ac aenean varius sed, in non mauris pulvinar vel, sed justo ac risus neque urna sed. Ut nunc, et ac nulla vel pellentesque euismod. Imperdiet at at, sit eleifend sit lectus nunc gravida eu, eleifend scelerisque consequat neque integer, pharetra suscipit aliquam. Urna nisl ipsum.</p>
-                <p>
-                Nec lacinia sit penatibus sollicitudin amet ut, et dapibus, quis hac ipsum sodales, fringilla maecenas hac curabitur. Nulla rutrum purus amet blandit tempor maecenas, libero magna, amet nullam aliquet nonummy sit praesent vitae, nibh sit porta, at odio eleifend. Justo eget est, habitant ultricies dolor nulla donec. Non lacus metus sollicitudin laoreet amet. Neque vestibulum in curabitur wisi, eget mi nisi suspendisse est consequat vivamus, rutrum ut nulla, neque venenatis non congue malesuada auctor, lorem fringilla nunc mauris porta turpis. In ipsum viverra, quis erat, vitae sodales urna non. Mauris sem, posuere purus diam pede deserunt sociis urna, ac montes, dolor nec, sed libero.</p>
-                <p>
-                Neque risus nibh sagittis wisi, non viverra metus nibh elementum, congue phasellus a porttitor gravida mauris, arcu ligula sollicitudin a neque quis debitis. Id ut mi amet vitae a, dolor rem aenean sed tempus ac semper, tempus id elementum eget donec faucibus, lectus lacinia dui platea in diam, orci commodo a amet mattis augue morbi. Erat et arcu egestas proin sem pede, erat ex sed mauris lobortis, pede laudantium dui nec, sapien tellus, mauris in vivamus massa platea natoque proin. Parturient hymenaeos eget sed habitasse, orci pharetra vitae nunc nunc aliquam faucibus, varius et nullam lorem massa donec orci, vulputate ac quos magna urna sit, rerum at aliquam. Ac vitae sagittis. Nam ornare quis est quam et, nulla arcu id laoreet mauris tincidunt, vitae quam mauris tortor ipsum potenti luctus. Duis wisi vestibulum. Curabitur non montes orci amet, suscipit viverra pede tellus scelerisque, ligula tempor vel eros adipiscing. Consequat imperdiet phasellus sapien.</p>
+                <h3>Public support for police body-worn cameras has grown in the wake of several high-profile shooting deaths. Law enforcement agencies across the country have invested in cameras to improve accountability and transparency, but how and when they’re are used and whether the footage gets released is still up for debate.</h3>
+<p>
+“A lot hangs in those details,” said Nancy La Vigne, director of Urban Institute’s Justice Policy Center. “Those policies and practices can make the technology more or less powerful in terms of their intended impact. And there’s a high degree of variation among states.”</p>
+                <p>In Chicago, <a href="http://www.nbcchicago.com/news/local/Police-Release-Disturbing-Video-of-Officer-Fatally-Shooting-Chicago-Teen-352231921.html">video of an officer fatally shooting</a> 17-year-old Laquan McDonald wasn’t released for 400 days. While the footage in that case came from dash-cams and not body-worn cameras, questions about when—or whether—to release the videos touch on the same issues. A new <a href="http://www.cityofchicago.org/city/en/depts/mayor/press_room/press_releases/2015/december/Task-Force-Police.html">mayoral task force</a> charged with reforming police accountability in response to McDonald’s death will also review the city’s video-release policy.</p>
+
+<p>But Chicago is not alone in grappling with the controversial policies surrounding police cameras. Several cities are deploying this new technology even as legislation governing its use is being written, which can lead to confusion when department policies bump up against wiretapping and public records laws already on the books.</p>
+
+<p>“In one jurisdiction, the state statutes around eavesdropping were inhibiting their ability to use the cameras the way they had envisioned,” La Vigne said. “You can imagine law enforcement wondering how useful these cameras are if they need to ask permission to record. How does that apply if you’re in a high-speed chase?”</p>
+
+<p>Some state wiretap laws exempt police from securing consent under certain circumstances. Officers in California, for example, do not need to tell suspects that they’re being filmed.</p>
+
+<p>In Pennsylvania, their <a href="http://www.post-gazette.com/local/city/2015/10/06/Police-body-camera-use-limited-until-law-changes-bureau-says/stories/201510060074">wiretap law prevents police</a> from recording inside a person’s home without permission, but state legislators are seeking to <a href="http://www.post-gazette.com/local/city/2015/10/06/Police-body-camera-use-limited-until-law-changes-bureau-says/stories/201510060074">amend that law</a> for police officers.</p>
+
+<p>In the meantime, Pittsburgh police officers have been instructed to shut off their cameras if they get a call dispatching them to a house, said Lt. Ed Trapp, project manager for the department’s body-worn camera program. Erring on the side of caution ensures that officers won’t have to pause in an emergency situation to turn the camera off or ask for permission to record.</p>
+
+<p>“We’re working on getting the legislation changed,” Trapp said. “Going into a house is one of the most obtrusive things government does….Why would that be the one time you’d want to turn the cameras off?”</p>
+
+<p>In addition to questions about recording in a person’s home, existing laws leave a lot of gray areas about when officers can turn their cameras on and off. In practice, officers have considerable discretion over when to activate their cameras, <a href="https://www.washingtonpost.com/opinions/five-myths-about-body-cameras/2015/05/29/5756c7be-0544-11e5-a428-c984eb077d4e_story.html">La Vigne said</a>, which means a lot of opportunities to miss out on crucial footage intentionally or not.</p>
+
+<p>“There need to be very clear, well-defined policies about when the camera should and should not be on,” said Jay Stanley, senior policy analyst at the ACLU. Uncertainty could open the door to officers abusing their discretion, Stanley said, so clear policies are needed to protect the privacy of crime victims or potential informants.</p>
+
+<h3>Striking a balance between privacy and transparency</h3>
+
+<p>In supporting body-worn cameras, the public may assume that they will have access to the footage, La Vigne said, but that’s not always the case.</p>
+
+<p>In early 2015, in response to public records requests, the Seattle Police Department launched their own <a href="https://www.youtube.com/channel/UCcdSPRNt1HmzkTL9aSDfKuA">YouTube channel of body-cam videos</a>. But the redacted videos are so blurred out, it’s hard to make out what’s being filmed. In Pittsburgh, the police department’s current policy is not to release any footage, Trapp said, but the department is waiting to see if the legislature will address how public records requests specifically apply to police body-camera videos.</p>
+
+<p>“There are certain states whose public records requests are very broad and basically make all the video releasable, and we think that could be a real privacy problem,” Stanley said. “But there are other states and departments where the police are trying to release nothing, and that is also not the right balance.”</p>
+
+<p>Kerry Condon, president of the Anaheim Police Association, said that officers in Anaheim treat body-worn cameras as an evidence collection tool, and the footage, therefore, as evidence that should not be released in an ongoing investigation. Exceptions for high-profile cases would need to be considered on a case-by-case basis by the chief of police.</p>
+
+<p>Condon helped develop the <a href="file://localhost/chrome-extension/::oemmndcbldboiebfnladdacbdfmadadm:http/:www.anaheim.net:documentcenter:view:346">body-worn camera policy used by Anaheim</a> police. “It’s one of the most important policies that I’ve dealt with in 25 years of law enforcement,” he said. “Right now, until a state policy comes into effect, every city or municipality has free rein on how they want to create their own policy.”</p>
+
+<p>While support for body-worn cameras is high, La Vigne cautions that deployment may be speeding ahead of policy development and evaluation. Policy details about how cameras and videos are used, implemented, shared, and stored matter—and the legal questions are still being worked out state by state.</p>
+
+<p>“This is a very new technology and everyone is trying to figure it out,” Stanley said. “We’re hopeful that over time, we’ll see a national movement toward a set of best practices…that are widely accepted by police departments.”</p>
+
                 <p>    
             </div>
         </div>
@@ -1512,7 +1990,7 @@
                     </p>
                     <h4>Project Credits</h4>
                     <h5>Research</h5>
-                    <p class="credit"><a href="http://www.urban.org/author/nancy-g-la-vigne" target="_blank">Nancg G. La Vigne</a>and <a href="http://www.urban.org/author/margaret-ulle" target="_blank">Margaret Ulle</a>
+                    <p class="credit"><a href="http://www.urban.org/author/nancy-g-la-vigne" target="_blank">Nancg G. La Vigne</a> and <a href="http://www.urban.org/author/margaret-ulle" target="_blank">Margaret Ulle</a>
                     </p>
 
                     <h5>Development and Design</h5>
@@ -1537,7 +2015,7 @@
     <footer>
         <!-- <div class="container"> -->
             <div class="col-lg-8 col-lg-offset-2">
-                <p class="copy" id="copy-language">Copyright © <a href="http://www.urban.org" target="_blank">Urban Institute</a> January 2016.   &nbsp; &nbsp; &nbsp;<a href="index.html#about" target="_blank">About this project.</a>&nbsp; &nbsp; &nbsp;<a href="https://github.com/UrbanInstitute/higher-education" target="_blank">View this on GitHub.</a>&nbsp; &nbsp; &nbsp;<a href="https://www.youtube.com/channel/UCcdSPRNt1HmzkTL9aSDfKuA" target="_blank">Background video from Seattle Police Department</a>
+                <p class="copy" id="copy-language">Copyright © <a href="http://www.urban.org" target="_blank">Urban Institute</a> January 2016.   &nbsp; &nbsp; &nbsp;<a href="index.html#about" target="_blank">About this project.</a>&nbsp; &nbsp; &nbsp;<a href="https://github.com/UrbanInstitute/higher-education" target="_blank">View this on GitHub.</a>&nbsp; &nbsp; &nbsp;<a href="https://www.youtube.com/watch?v=LVSDKlVnKOE" target="_blank">Background video from Seattle Police Department</a>
                 </p>
             </div>
         <!-- </div> -->

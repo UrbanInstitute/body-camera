@@ -24,9 +24,10 @@
     top: 0px !important;
 }
 .is-below-header{
-top: 59px !important;
+    top: 59px !important;
     position: fixed !important;
     z-index: 1000;
+    background-color: #fff;
 }
 
 #header-pinned .content {

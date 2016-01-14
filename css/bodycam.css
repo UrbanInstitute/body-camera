@@ -29,25 +29,34 @@ td.lawEnforcement{
 .mapState{
 	stroke: 16px;
 }
+#desktopTitle{
+	margin-top:50px;
+}
 
 .groupLabels{
 	font-size: 20px;
 	font-weight: 300;
 }
 .left{
-	border-left: 1px solid #000;
+	border-left: 20px solid #fff;
 }
 .center{
 	border-top: 1px solid #000;
 }
 .right{
-	border-right: 1px solid #000;
+	border-right: 20px solid #fff;
 }
 .header-group{
 	height: 8px;
 }
 .mapPassed{
 	fill:#1696d2;
+}
+.mapProposedpending{
+	fill:#fdbf11;
+}
+.mapBoth{
+	fill:#55b748;
 }
 .mapNo{
 	fill:#eee;
@@ -78,22 +87,28 @@ td.lawEnforcement{
 .proposedpending{
 	background-color: #fdbf11;
 }
+.proposedpending:hover{
+	border: 2px solid #000;
+}
 .both{
 	background-color: #55b748;
+}
+.both:hover{
+		border: 2px solid #000;
 }
 .passed{
 	background-color:#1696d2;
 	fill:#1696d2;
 }
 .passed:hover{
-	background-color:#fdbf11;
+	border: 2px solid #000;
 }
 .no{
 	/*border-radius: 10px;*/
 	background-color:#efefef;
 }
 .no:hover{
-	background-color: #ccc;
+	border: 2px solid #000;
 }
 .highlighted{
 	background-color:#fdbf11;
@@ -281,7 +296,7 @@ color: #fff;
 margin-bottom: 30px;
 }
 .introQuoteIntro{
-	font-size: 30pt;
+	font-size: 28pt;
 }
 .textHighlight{
 	background-color: #1696d2;
@@ -356,6 +371,20 @@ footer {
     background-position: 10px center;
     background-repeat: no-repeat;
 }
+.list-proposedpending{
+	color: #fff;
+    background-color: #fdbf11;
+    background-image: url(../img/icons-07.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+.list-both{
+	color: #fff;
+    background-color: #55b748;
+    background-image: url(../img/icons-07.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
 .list-no{
 	color: #000;
     background-color: #eee;
@@ -377,6 +406,14 @@ footer {
 	#mobile{
 		display: block;
 	}
+	#desktopTitle{
+		display: none;
+	}
+	#mobile-title{
+		padding-top:45px;
+		background-color: #fff;
+		width: 100%;
+	}
 	#body-cam{
 		display: none;
 	}
@@ -389,6 +426,9 @@ footer {
 	.intro{
 		background: url(../img/mobile-background.jpg) no-repeat center center scroll;
 		background-size: cover;
+	}
+	#intro-gradient{
+		display: none;
 	}
 	.full-screen{
 		display: none;

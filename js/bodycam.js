@@ -37,8 +37,10 @@ var promise = new Promise(function(resolve, reject) {
 
                 //first part is the header-group labels
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("colspan", function(column){
-                    if (column == "audio") return "4";
-                    if (column == "allPartyConsent") return "4";
+                    if (column == "State") return "1";
+                    else if (column == "audio") return "4";
+                    else if (column == "allPartyConsent") return "4";
+                    else{ d3.select(this).remove();}
                 }).attr("class", "groupLabels")
                 .text(function(column){
                     if (column == "audio") return "Current Laws Concerning Video Surveillance";
@@ -48,14 +50,14 @@ var promise = new Promise(function(resolve, reject) {
 
                 //grouping lines
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("class", function(column){
-                    if (column == "audio") return "header-group left center";
+                    if (column == "audio") return "header-group  center";
                     if (column == "allPartyConsent") return "header-group  center";
                     if (column == "privatePlaces") return "header-group  center";
                     if (column == "lawEnforcement") return "header-group right center";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram")  return "header-group left center";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed")  return "header-group  center";
                     if (column == "RestrictsPublicAccess") return  "header-group  center";
-                    if (column == "PrescribesStorageTime") return "header-group right center";
+                    if (column == "PrescribesStorageTime") return "header-group  center";
                 });
 
 
@@ -326,66 +328,90 @@ var promise = new Promise(function(resolve, reject) {
             .attr("class", "state-name")
 
             stateList.append("div")
-            .html("Passed")
+            .html("Allow the recording of audio")
             .attr("class", function(d){
-                var value = d.passed;
-                if (value == "X"){
-                    return "list-item list-yes";
+                var value = d.audio;
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
             })
 
             stateList.append("div")
-            .html("Proposed or Pending")
+            .html("Require all-party consent")
             .attr("class", function(d){
-                var value = d.proposedOrPending;
-                if (value == "X"){
-                    return "list-item list-yes";
+                var value = d.allPartyConsent;
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
             })
 
             stateList.append("div")
-            .html("Creates or Recommends a Study Group Pilot Program")
+            .html("Private places are off limits")
+            .attr("class", function(d){
+                var value = d.privatePlaces;
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Law enforcement excemptions")
+            .attr("class", function(d){
+                var value = d.lawEnforcement;
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
+                }else{
+                    return "list-item list-no"
+                }
+            })
+
+            stateList.append("div")
+            .html("Creates or recommends a study group or pilot program")
             .attr("class", function(d){
                 var value = d.CreatesRecommendsaStudyGroupPilotProgram;
-                if (value == "X"){
-                    return "list-item list-yes";
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
             })
 
             stateList.append("div")
-            .html("Addresses Wiretapping Privacy Issues")
-            .attr("class", function(d){
-                var value = d.AddressesWiretappingPrivacyIssues;
-                if (value == "X"){
-                    return "list-item list-yes";
-                }else{
-                    return "list-item list-no"
-                }
-            })
-
-            stateList.append("div")
-            .html("Dictates Where Cameras Can Go and if They Can Be Turned On and Off")
+            .html("Dictates where and when cameras can be used")
             .attr("class", function(d){
                 var value = d.DictatesWhenWhereCamerasCanBeUsed;
-                if (value == "X"){
-                    return "list-item list-yes";
-                }else{
-                    return "list-item list-no"
-                }
-            })
-
-            stateList.append("div")
-            .html("Presumptively Shields Footage from Public Disclosure")
-            .attr("class", function(d){
-                var value = d.PresumptivelyShieldsFootagefromPublicDisclosure;
-                if (value == "X"){
-                    return "list-item list-yes";
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
@@ -393,22 +419,30 @@ var promise = new Promise(function(resolve, reject) {
 
 
             stateList.append("div")
-            .html("Addresses Redactions")
+            .html("Restricts public access to footage")
             .attr("class", function(d){
                 var value = d.RestrictsPublicAccess;
-                if (value == "X"){
-                    return "list-item list-yes";
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
             })
 
             stateList.append("div")
-            .html("Addresses Stageand Time That Footage Must be Kept")
+            .html("Prescribes video storage time")
             .attr("class", function(d){
                 var value = d.PrescribesStorageTime;
-                if (value == "X"){
-                    return "list-item list-yes";
+                if (value == "passed"){
+                    return "list-item list-passed";
+                }else if (value == "proposedpending"){
+                    return "list-item list-proposedpending"
+                }else if (value == "both"){
+                    return "list-item list-both"
                 }else{
                     return "list-item list-no"
                 }
@@ -420,12 +454,12 @@ var promise = new Promise(function(resolve, reject) {
             .domain(["X", ""])
             .range(["#1696d2", "#fdbf11", "#000"]);
 
-        drawTileMap(data, "tile1", "passed");
-        drawTileMap(data, "tile2", "proposedOrPending");
-        drawTileMap(data, "tile3", "CreatesRecommendsaStudyGroupPilotProgram");
-        drawTileMap(data, "tile4", "AddressesWiretappingPrivacyIssues");
-        drawTileMap(data, "tile5", "DictatesWhenWhereCamerasCanBeUsed");
-        drawTileMap(data, "tile6", "PresumptivelyShieldsFootagefromPublicDisclosure");
+        drawTileMap(data, "tile1", "audio");
+        drawTileMap(data, "tile2", "allPartyConsent");
+        drawTileMap(data, "tile3", "privatePlaces");
+        drawTileMap(data, "tile4", "lawEnforcement");
+        drawTileMap(data, "tile5", "CreatesRecommendsaStudyGroupPilotProgram");
+        drawTileMap(data, "tile6", "DictatesWhenWhereCamerasCanBeUsed");
         drawTileMap(data, "tile7", "RestrictsPublicAccess");
         drawTileMap(data, "tile8", "PrescribesStorageTime");
 
@@ -440,9 +474,13 @@ var promise = new Promise(function(resolve, reject) {
                 })
                 .attr("class", function (d) {                       
                     var value = d[thisVariable];
-                    if (value) {
+                    if (value == "passed") {
                         return "mapPassed ";
-                    } else {
+                    } else if (value =="proposedpending"){
+                        return "mapProposedpending ";
+                    } else if (value =="both"){
+                        return "mapBoth ";
+                    } else{
                         return "mapNo ";
                     }
                 });
