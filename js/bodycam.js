@@ -31,7 +31,22 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("id", "body-cam-table").attr("class", "floatThead-table")
                     thead = table.append("thead"),
                     tbody = table.append("tbody");
-                // append the header rows
+                
+                
+                // append the header rows 
+
+                //first part is the header-group labels
+                thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("colspan", function(column){
+                    if (column == "audio") return "4";
+                    if (column == "allPartyConsent") return "4";
+                }).attr("class", "groupLabels")
+                .text(function(column){
+                    if (column == "audio") return "Current Laws Concerning Video Surveillance";
+                    if (column == "allPartyConsent") return "Laws Specific to Police Body-Worn Cameras";
+                });
+
+
+                //grouping lines
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("class", function(column){
                     if (column == "audio") return "header-group left center";
                     if (column == "allPartyConsent") return "header-group  center";
