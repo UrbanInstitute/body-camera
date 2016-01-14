@@ -109,13 +109,13 @@ var promise = new Promise(function(resolve, reject) {
                     }
                 }).on("mouseenter", function(d) {
                     if($(this).hasClass("passed")){
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", true)}
+                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", true)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
                 })
                 .on("mouseleave", function(d) {
                     if($(this).hasClass("passed")){
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapYesSelected", false)}
+                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", false)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
                     
@@ -200,8 +200,8 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.audio;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "audio";
-                            } else {
+                                return d.properties.value.ABBR + " mapState " + "audio " + value;
+                            } else{
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "audio";
                             }
                         }
@@ -214,7 +214,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.allPartyConsent;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "allPartyConsent";
+                                return d.properties.value.ABBR + " mapState " + "allPartyConsent " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "allPartyConsent";
                             }
@@ -227,7 +227,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.lawEnforcement;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
+                                return d.properties.value.ABBR + " mapState " + "lawEnforcement " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
                             }
@@ -240,7 +240,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.privatePlaces;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "privatePlaces";
+                                return d.properties.value.ABBR + " mapState " + "privatePlaces " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "privatePlaces";
                             }
@@ -253,7 +253,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.CreatesRecommendsaStudyGroupPilotProgram;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "CreatesRecommendsaStudyGroupPilotProgram";
+                                return d.properties.value.ABBR + " mapState " + "CreatesRecommendsaStudyGroupPilotProgram " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "CreatesRecommendsaStudyGroupPilotProgram";
                             }
@@ -266,7 +266,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.DictatesWhenWhereCamerasCanBeUsed;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
+                                return d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             }
@@ -279,7 +279,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.DictatesWhenWhereCamerasCanBeUsed;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
+                                return d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
                             }
@@ -292,7 +292,7 @@ var promise = new Promise(function(resolve, reject) {
                         if (d.properties.value) {
                             var value = d.properties.value.PrescribesStorageTime;
                             if (value) {
-                                return "mapYes " + d.properties.value.ABBR + " mapState " + "PrescribesStorageTime";
+                                return d.properties.value.ABBR + " mapState " + "PrescribesStorageTime " + value;
                             } else {
                                 return "mapNo " + d.properties.value.ABBR + " mapState " + "PrescribesStorageTime";
                             }
@@ -441,7 +441,7 @@ var promise = new Promise(function(resolve, reject) {
                 .attr("class", function (d) {                       
                     var value = d[thisVariable];
                     if (value) {
-                        return "mapYes ";
+                        return "mapPassed ";
                     } else {
                         return "mapNo ";
                     }

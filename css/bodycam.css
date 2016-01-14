@@ -46,14 +46,26 @@ td.lawEnforcement{
 .header-group{
 	height: 8px;
 }
-.mapYes{
+.mapPassed{
 	fill:#1696d2;
 }
 .mapNo{
 	fill:#eee;
 }
 
-.mapYesSelected {
+.mapState.passed{
+		fill:#1696d2;
+}
+
+.mapState.proposedpending{
+	fill: #fdbf11;
+}
+
+.mapState.both{
+	fill:#55b748;
+}
+
+.mapPassedSelected {
     stroke-width: 2;
     stroke: #efbf11;
     fill:#efbf11 !important;
