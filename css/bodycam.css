@@ -51,15 +51,21 @@ td.lawEnforcement{
 }
 .mapPassed{
 	fill:#1696d2;
+	stroke:#1696d2;
 }
 .mapProposedpending{
 	fill:#fdbf11;
+	stroke:#fdbf11;
+
 }
 .mapBoth{
 	fill:#55b748;
+	stroke:#55b748;
+
 }
 .mapNo{
-	fill:#ddd;
+	fill:#e6e6e6;
+	stroke: #e6e6e6;
 }
 
 .mapState.passed{
@@ -75,10 +81,8 @@ td.lawEnforcement{
 }
 
 .mapPassedSelected {
-    stroke-width: 2.5;
-    z-index: 10;
-    stroke: #efbf11;
-    fill:#efbf11 !important;
+    stroke: #000;
+    fill:#000 !important;
 }
 .mapNoSelected {
     stroke-width: 2;
@@ -106,7 +110,7 @@ td.lawEnforcement{
 }
 .no{
 	/*border-radius: 10px;*/
-	background-color:#ddd;
+	background-color:#e6e6e6;
 }
 .no:hover{
 	border: 2px solid #000;

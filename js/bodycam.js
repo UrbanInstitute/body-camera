@@ -150,17 +150,14 @@ var promise = new Promise(function(resolve, reject) {
                             .html(d.blurb)
 
                     }
-                    if($(this).hasClass("passed")){
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", true)}
-                    else{
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
+                    // if($(this).hasClass("passed")){
+                        d3.select("." + d.column).select("path." + d.stateAbbr).classed("mapPassedSelected", true)
+                    // else{
+                        // var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
                 })
                 .on("mouseleave", function(d) {
                     d3.selectAll(".blurbTooltip").remove();
-                    if($(this).hasClass("passed")){
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", false)}
-                    else{
-                        var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
+                    d3.selectAll("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", false)
                     
                 })
                 // .on("mousedown", function(d){
