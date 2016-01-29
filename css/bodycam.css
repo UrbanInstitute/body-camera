@@ -59,7 +59,7 @@ td.lawEnforcement{
 	fill:#55b748;
 }
 .mapNo{
-	fill:#eee;
+	fill:#ddd;
 }
 
 .mapState.passed{
@@ -75,7 +75,8 @@ td.lawEnforcement{
 }
 
 .mapPassedSelected {
-    stroke-width: 2;
+    stroke-width: 2.5;
+    z-index: 10;
     stroke: #efbf11;
     fill:#efbf11 !important;
 }
@@ -105,7 +106,7 @@ td.lawEnforcement{
 }
 .no{
 	/*border-radius: 10px;*/
-	background-color:#efefef;
+	background-color:#ddd;
 }
 .no:hover{
 	border: 2px solid #000;
@@ -549,4 +550,35 @@ footer {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+}
+
+
+/************* TOOLTIPS ****************/
+.blurbTooltip{
+	position: absolute;
+    /* top: 25px; */
+    text-align: left;
+    /*height: 100px;*/
+    padding: 10px;
+    background: rgba(255,255,255,.9);
+    z-index: 100;
+    margin-top: 18px;
+    margin-left: -1px;
+    /*border: 2px solid black;*/
+    box-shadow: 0px 3px 5px #ccc;
+}
+.blurbTooltip:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: rgba(255,255,255,.8);
+	border-width: 10px;
+	margin-left: -10px;
+
 }

@@ -7,26 +7,46 @@ var promise = new Promise(function(resolve, reject) {
     //JPC will edit a different sheet, which is not live: https://docs.google.com/spreadsheets/d/1wShnyXTUYbu9LqkF6GG_dQeV70n4rqLNVsZwBNq8B-g/edit#gid=0
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
 
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/pubhtml';
+    var GOOGLE_ID = "15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ"
+    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
         Tabletop.init({
             key: public_spreadsheet_url,
             callback: showInfo,
-            simpleSheet: true
+            simpleSheet: false
         });
     }
 
-    function showInfo(data) {
+    function showInfo(sheets) {
         // data comes through as a simple array since simpleSheet is turned on
         // alert("Successfully processed " + data.length + " rows!")
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].pass, data[1].Name, data[2].Name ].join(", ");
 
         //last updated
+        console.log(sheets)
+        var blurbs = sheets.blurbs.all()
+        var data = sheets.data.all()
          document.getElementById("date").innerHTML = "Data last updated " + data[0].DateUpdated;
         // The table generation function
-        function tabulate(data, columns) {
+        function tabulate(data, blurbs, columns) {
+                // console.log(data, blurbs)
+
+                for (var i=0; i < data.length; i ++){
+                    for(var key in blurbs[i]){
+                        if (key == "ABBR" || key == "DateUpdated" || key == "State" || key == "pdfLink"){
+                            continue
+                        }else{
+                            if (blurbs[i][key] != ""){
+                                data[i][key + "blurb"] = blurbs[i][key]
+                            }
+                        }
+                    }
+                }
+
+                console.log(data)
+
                 var table = d3.select("#body-cam").append("table").style("border-collapse", "collapse") // <= Add this line in
                     .attr("id", "body-cam-table").attr("class", "floatThead-table")
                     thead = table.append("thead"),
@@ -36,7 +56,12 @@ var promise = new Promise(function(resolve, reject) {
                 // append the header rows 
 
                 //first part is the header-group labels
-                thead.append("tr").selectAll("th").data(columns).enter().append("th").attr("colspan", function(column){
+                thead.append("tr")
+                .selectAll("th")
+                .data(columns)
+                .enter()
+                .append("th")
+                .attr("colspan", function(column){
                     if (column == "State") return "1";
                     else if (column == "audio") return "4";
                     else if (column == "allPartyConsent") return "4";
@@ -82,17 +107,21 @@ var promise = new Promise(function(resolve, reject) {
 
 
                 // create a row for each object in the data
-                var rows = tbody.selectAll("tr").data(data).enter().append("tr");
+                var rows = tbody.selectAll("tr")
+                    .data(data)
+                    .enter()
+                    .append("tr");
                 // create a cell in each row for each column
-                var cells = rows.selectAll("td").data(function(row) {
-                    return columns.map(function(column) {
-                        return {
-                            column: column,
-                            value: row[column],
-                            stateAbbr: row["ABBR"],
-                            link: row["pdfLink"]
-                        };
-                    });
+                var cells = rows.selectAll("td")
+                    .data(function(row) {
+                        return columns.map(function(column) {
+                            return {
+                                column: column,
+                                value: row[column],
+                                stateAbbr: row["ABBR"],
+                                blurb: row[column + "blurb"]
+                            };
+                        });
                 }).enter().append("td").text(function(d) {
                     if (d.value != '') {
                         if (d.value != "passed" && d.value != "proposedpending" && d.value != "both") return d.value; //should only return stateNames
@@ -110,23 +139,35 @@ var promise = new Promise(function(resolve, reject) {
                         return "rowLabel";
                     }
                 }).on("mouseenter", function(d) {
+                    if(typeof(d.blurb) != "undefined"){
+                        d3.select(this)
+                            .append("div")
+                            .attr("class","blurbTooltip")
+                            .style("width",function(){ 
+                                console.log(d3.select(this).node().parentNode.getBoundingClientRect().width)
+                                return d3.select(this).node().parentNode.getBoundingClientRect().width + "px"
+                            })
+                            .html(d.blurb)
+
+                    }
                     if($(this).hasClass("passed")){
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", true)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
                 })
                 .on("mouseleave", function(d) {
+                    d3.selectAll(".blurbTooltip").remove();
                     if($(this).hasClass("passed")){
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", false)}
                     else{
                         var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", false)}
                     
                 })
-                .on("mousedown", function(d){
-                    if ($(this).hasClass("rowLabel")){
-                        window.open(d.link);
-                    }
-                })
+                // .on("mousedown", function(d){
+                //     if ($(this).hasClass("rowLabel")){
+                //         window.open(d.link);
+                //     }
+                // })
                 $(".rowLabel").wrapInner("<span class='stateName'></span>");
                 $(".map-cell").addClass(function(index) {
                     return (columnList[index]);
@@ -136,7 +177,7 @@ var promise = new Promise(function(resolve, reject) {
 
         
             // render the table
-        var stateTable = tabulate(data, columnList);
+        var stateTable = tabulate(data, blurbs, columnList);
 
         function redraw(w, h) {
             //map stuff
