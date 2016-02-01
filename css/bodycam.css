@@ -82,7 +82,8 @@ td.lawEnforcement{
 
 .mapPassedSelected {
     stroke: #000;
-    fill:#000 !important;
+    stroke-width: 2;
+    /*fill:#000 !important;*/
 }
 .mapNoSelected {
     stroke-width: 2;
@@ -92,29 +93,29 @@ td.lawEnforcement{
 .proposedpending{
 	background-color: #fdbf11;
 }
-.proposedpending:hover{
+/*.proposedpending:hover{
 	border: 2px solid #000;
 }
-.both{
+*/.both{
 	background-color: #55b748;
 }
-.both:hover{
+/*.both:hover{
 		border: 2px solid #000;
 }
-.passed{
+*/.passed{
 	background-color:#1696d2;
 	fill:#1696d2;
 }
-.passed:hover{
+/*.passed:hover{
 	border: 2px solid #000;
-}
+}*/
 .no{
 	/*border-radius: 10px;*/
 	background-color:#e6e6e6;
 }
-.no:hover{
+/*.no:hover{
 	border: 2px solid #000;
-}
+}*/
 .highlighted{
 	background-color:#fdbf11;
 }
@@ -163,7 +164,7 @@ tr:hover > .rowLabel *{
 	width: auto;
 	white-space: nowrap;
 	line-height: 14px;
-	cursor: pointer;
+	cursor: default;
 }
 
 .map-cell{
@@ -565,9 +566,8 @@ footer {
     /*height: 100px;*/
     padding: 10px;
     background: rgba(255,255,255,.9);
-    z-index: 100;
     margin-top: 18px;
-    margin-left: -1px;
+    margin-left: -3px;
     /*border: 2px solid black;*/
     box-shadow: 0px 3px 5px #ccc;
 }
@@ -586,3 +586,21 @@ footer {
 	margin-left: -10px;
 
 }
+
+.blurbOutline{
+	position: absolute;
+    /* top: 25px; */
+    display: block;
+    height: 14px;
+    padding: 0px;
+    /*height: 100px;*/
+    background: none;
+    margin-top: -7px;
+    margin-left: -3px;
+    border: 2px solid black;
+    /*border: 2px solid black;*/
+    /*box-shadow: 0px 3px 5px #ccc;*/
+}
+
+
+

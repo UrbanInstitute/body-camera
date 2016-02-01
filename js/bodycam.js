@@ -12,6 +12,16 @@ var promise = new Promise(function(resolve, reject) {
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
+        d3.select("span.page-scroll")
+            .on("click", function(){
+                // console.log($('#stateTable').offset().top)
+                if(d3.select("#mobile").style("display") == "block"){
+                    $("html, body").animate({ scrollTop: $('#mobile #stateTable').offset().top-205 }, 1000);    
+                }else{
+                    $("html, body").animate({ scrollTop: $('#desktopTitle #stateTable').offset().top-90 }, 1000);
+                }
+            })
+
         Tabletop.init({
             key: public_spreadsheet_url,
             callback: showInfo,
@@ -28,7 +38,7 @@ var promise = new Promise(function(resolve, reject) {
         console.log(sheets)
         var blurbs = sheets.blurbs.all()
         var data = sheets.data.all()
-         document.getElementById("date").innerHTML = "Data last updated " + data[0].DateUpdated;
+         document.getElementById("date").innerHTML = "Data current as of " + data[0].DateUpdated;
         // The table generation function
         function tabulate(data, blurbs, columns) {
                 // console.log(data, blurbs)
@@ -68,8 +78,8 @@ var promise = new Promise(function(resolve, reject) {
                     else{ d3.select(this).remove();}
                 }).attr("class", "groupLabels")
                 .text(function(column){
-                    if (column == "audio") return "Current Laws Concerning Video Surveillance";
-                    if (column == "allPartyConsent") return "Laws Specific to Police Body-Worn Cameras";
+                    if (column == "audio") return "Current Laws Applicable to Body-Worn Cameras";
+                    if (column == "allPartyConsent") return "Laws Specific to Body-Worn Cameras";
                 });
 
 
@@ -92,7 +102,7 @@ var promise = new Promise(function(resolve, reject) {
                     if (column == "allPartyConsent") return "Require all-party consent";
                     if (column == "privatePlaces") return "Private places are off limits";
                     if (column == "lawEnforcement") return "Law enforcement excemptions";
-                    if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot program";
+                    if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
                     if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
                     if (column == "PrescribesStorageTime") return "Prescribes video storage time";
@@ -139,24 +149,41 @@ var promise = new Promise(function(resolve, reject) {
                         return "rowLabel";
                     }
                 }).on("mouseenter", function(d) {
+                    if(!d3.select(this).classed("rowLabel")){
+                        d3.select(this)
+                            .append("div")
+                            .attr("class","blurbOutline")
+                            .style("width",function(){ 
+                                var w = (parseFloat(d3.select(this).node().parentNode.getBoundingClientRect().width))
+                                if(d3.select(d3.select(this).node().parentNode).classed("CreatesRecommendsaStudyGroupPilotProgram") || d3.select(d3.select(this).node().parentNode).classed("lawEnforcement")){
+                                    return (w-4) + "px"
+                                }else{ return w + "px"}
+                            })
+                    }
                     if(typeof(d.blurb) != "undefined"){
                         d3.select(this)
                             .append("div")
                             .attr("class","blurbTooltip")
-                            .style("width",function(){ 
-                                console.log(d3.select(this).node().parentNode.getBoundingClientRect().width)
-                                return d3.select(this).node().parentNode.getBoundingClientRect().width + "px"
-                            })
+                        .style("width",function(){ 
+                            var w = (parseFloat(d3.select(this).node().parentNode.getBoundingClientRect().width))
+                            if(d3.select(d3.select(this).node().parentNode).classed("CreatesRecommendsaStudyGroupPilotProgram") || d3.select(d3.select(this).node().parentNode).classed("lawEnforcement")){
+                                return (w-4) + "px"
+                            }else{ return w + "px"}
+                        })
                             .html(d.blurb)
 
                     }
                     // if($(this).hasClass("passed")){
-                        d3.select("." + d.column).select("path." + d.stateAbbr).classed("mapPassedSelected", true)
+                        var state = d3.select("." + d.column).select("path." + d.stateAbbr)
+                            .classed("mapPassedSelected", true)
+                        state.node().parentNode.appendChild(state.node())
                     // else{
                         // var thisMapState = d3.select("." + d.column).select("." + d.stateAbbr).classed("mapNoSelected", true)}
                 })
                 .on("mouseleave", function(d) {
                     d3.selectAll(".blurbTooltip").remove();
+                    d3.selectAll(".blurbOutline").remove();
+
                     d3.selectAll("." + d.column).select("." + d.stateAbbr).classed("mapPassedSelected", false)
                     
                 })
@@ -265,11 +292,11 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.lawEnforcement;
+                            var value = d.properties.value.privatePlaces;
                             if (value) {
-                                return d.properties.value.ABBR + " mapState " + "lawEnforcement " + value;
+                                return d.properties.value.ABBR + " mapState " + "privatePlaces " + value;
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "privatePlaces";
                             }
                         }
                     });
@@ -278,11 +305,11 @@ var promise = new Promise(function(resolve, reject) {
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.privatePlaces;
+                            var value = d.properties.value.lawEnforcement;
                             if (value) {
-                                return d.properties.value.ABBR + " mapState " + "privatePlaces " + value;
+                                return d.properties.value.ABBR + " mapState " + "lawEnforcement " + value;
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "privatePlaces";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "lawEnforcement";
                             }
                         }
                     });
@@ -426,7 +453,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Creates or recommends a study group or pilot program")
+            .html("Creates or recommends a study group or pilot")
             .attr("class", function(d){
                 var value = d.CreatesRecommendsaStudyGroupPilotProgram;
                 if (value == "passed"){
