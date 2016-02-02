@@ -603,7 +603,7 @@ footer {
 }
 
 /************* HEADER INFO ****************/
-.fa{
+.fa-info-circle{
 	padding-left: 7px;
 	display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -614,7 +614,7 @@ footer {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
 }
-.fa:hover{
+.fa-info-circle:hover{
 	color: #1696d2;
 }
 .fa-info-circle:before {

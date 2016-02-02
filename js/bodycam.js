@@ -571,7 +571,7 @@ var promise = new Promise(function(resolve, reject) {
             }) 
         // end small layouts
 
-           d3.selectAll(".fa")
+           d3.selectAll(".fa-info-circle")
             .on("mouseover", function(){
                 console.log("true")
                 var text = d3.select(this).attr("data-text")
