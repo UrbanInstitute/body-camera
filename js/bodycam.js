@@ -97,11 +97,11 @@ var promise = new Promise(function(resolve, reject) {
 
 
                 //header labels
-                thead.append("tr").selectAll("th").data(columns).enter().append("th").text(function(column) {
-                    if (column == "audio") return "Allow the recording of audio";
-                    if (column == "allPartyConsent") return "Require all-party consent";
-                    if (column == "privatePlaces") return "Private places are off limits";
-                    if (column == "lawEnforcement") return "Law enforcement excemptions";
+                thead.append("tr").selectAll("th").data(columns).enter().append("th").html(function(column) {
+                    if (column == "audio") return "Prohibits audio recordings";
+                    if (column == "allPartyConsent") return "Require two-party consent<i class=\"fa fa-info-circle\" data-text=\"In some states, this is called &ldquo;all-party consent.&rdquo;\"></i>";
+                    if (column == "privatePlaces") return "Restricts recordings in private spaces";
+                    if (column == "lawEnforcement") return "Exempts police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement can choose not to respond to public records requests to protect active investigations, public safety, or national security\"></i>";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
                     if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
@@ -393,7 +393,7 @@ var promise = new Promise(function(resolve, reject) {
             .attr("class", "state-name")
 
             stateList.append("div")
-            .html("Allow the recording of audio")
+            .html("Prohibits audio recordings")
             .attr("class", function(d){
                 var value = d.audio;
                 if (value == "passed"){
@@ -408,7 +408,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Require all-party consent")
+            .html("Require two-party consent<i class=\"fa fa-info-circle\" data-text=\"In some states, this is called &ldquo;all-party consent.&rdquo;\"></i>")
             .attr("class", function(d){
                 var value = d.allPartyConsent;
                 if (value == "passed"){
@@ -423,7 +423,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Private places are off limits")
+            .html("Restricts recordings in private spaces")
             .attr("class", function(d){
                 var value = d.privatePlaces;
                 if (value == "passed"){
@@ -438,7 +438,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Law enforcement excemptions")
+            .html("Exempts police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement can choose not to respond to public records requests to protect active investigations, public safety, or national security\"></i>")
             .attr("class", function(d){
                 var value = d.lawEnforcement;
                 if (value == "passed"){
@@ -571,30 +571,26 @@ var promise = new Promise(function(resolve, reject) {
             }) 
         // end small layouts
 
-
+           d3.selectAll(".fa")
+            .on("mouseover", function(){
+                console.log("true")
+                var text = d3.select(this).attr("data-text")
+                d3.select(this)
+                    .append("div")
+                    .attr("class","headerTooltip")
+                    .html(text)
+            })
+            .on("mouseout", function(){
+                d3.selectAll(".headerTooltip").remove();
+            })
 
     }
     $( "#copy-language" ).append( "<a target='_new' href='" + public_spreadsheet_url + "'>Download the data</a>");
+
     resolve(1)
 })
 promise.then(function(result) {
     setTimeout(function(){  $('#body-cam-table').stickyTableHeaders({fixedOffset:50}); }, 3000);
-
-    //do some window width stuff
-    //if the window is small, remove body-cam div, save as a var
-
-    // $(window).on("resize", function() {
-    //     var w = window.innerWidth;
-    //     if (w <= 768){
-    //         var bodyCamTable = d3.select("#body-cam")
-    //         .remove();
-    //     }
-    // });
-
-    // savedElement will still contain the reference to the object,
-    // so for example, you can do:
-    // document.getElementById('container').appendChild(savedElement);
-// etc.
     
 })
 
