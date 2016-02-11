@@ -585,7 +585,6 @@ var promise = new Promise(function(resolve, reject) {
             })
 
     }
-    $( "#copy-language" ).append( "<a target='_new' href='" + public_spreadsheet_url + "'>Download the data</a>");
 
     resolve(1)
 })

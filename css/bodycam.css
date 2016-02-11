@@ -311,9 +311,13 @@ margin-bottom: 30px;
 	padding-right: 4px;
 }
 
+.about-section{
+	padding-bottom: 30px;
+}
 footer {
-    height: 50px;
-    background-color: black;
+	padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.5em;    background-color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -324,6 +328,16 @@ footer {
     margin: 15px 0 0;
     color: #eee;
     font-weight: 400;
+}
+#copy-language span{
+	float: left;
+	margin-right: 25px;
+}
+#disclaimer{
+	margin-top: -19px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    font-style: italic;
 }
 
 /*fixed header*/
