@@ -77,7 +77,7 @@ var promise = new Promise(function(resolve, reject) {
                     else if (column == "allPartyConsent") return "4";
                     else{ d3.select(this).remove();}
                 }).attr("class", "groupLabels")
-                .text(function(column){
+                .html(function(column){
                     if (column == "audio") return "Current Laws Applicable to Body-Worn Cameras";
                     if (column == "allPartyConsent") return "Laws Specific to Body-Worn Cameras";
                 });
