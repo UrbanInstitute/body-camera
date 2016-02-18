@@ -12,7 +12,7 @@ var promise = new Promise(function(resolve, reject) {
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
-        d3.select("span.page-scroll")
+        d3.selectAll("span.page-scroll")
             .on("click", function(){
                 // console.log($('#stateTable').offset().top)
                 if(d3.select("#mobile").style("display") == "block"){
@@ -98,9 +98,9 @@ var promise = new Promise(function(resolve, reject) {
 
                 //header labels
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").html(function(column) {
-                    if (column == "audio") return "Prohibits audio recordings";
+                    if (column == "audio") return "Prohibits only audio recordings<i class=\"fa fa-info-circle\" data-text=\"Video recordings with no sound may be permissible\"></i>";
                     if (column == "allPartyConsent") return "Require two-party consent<i class=\"fa fa-info-circle\" data-text=\"In some states, this is called &ldquo;all-party consent.&rdquo;\"></i>";
-                    if (column == "privatePlaces") return "Restricts recordings in private spaces";
+                    if (column == "privatePlaces") return "Restricts recordings where privacy is expected<i class=\"fa fa-info-circle\" data-text=\"In many states, this is called a &lsquo;reasonable expectation&rsquo; of not being recorded.\"></i>";
                     if (column == "lawEnforcement") return "Exempts police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement can choose not to respond to public records requests to protect active investigations, public safety, or national security\"></i>";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot";
                     if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
@@ -370,6 +370,7 @@ var promise = new Promise(function(resolve, reject) {
         var cells = d3.select(".map-cell")
         redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height)
         $(window).on("resize", function() {
+            // var cells = d3.select(".map-cell")
             redraw(cells.node().getBoundingClientRect().width, cells.node().getBoundingClientRect().height - 5)
         });
 
@@ -393,7 +394,7 @@ var promise = new Promise(function(resolve, reject) {
             .attr("class", "state-name")
 
             stateList.append("div")
-            .html("Prohibits audio recordings")
+            .html("Prohibits only audio recordings<i class=\"fa fa-info-circle\" data-text=\"Video recordings with no sound may be permissible\"></i>")
             .attr("class", function(d){
                 var value = d.audio;
                 if (value == "passed"){
@@ -423,7 +424,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Restricts recordings in private spaces")
+            .html("Restricts recordings where privacy is expected<i class=\"fa fa-info-circle\" data-text=\"In many states, this is called a &lsquo;reasonable expectation&rsquo; of not being recorded.\"></i>")
             .attr("class", function(d){
                 var value = d.privatePlaces;
                 if (value == "passed"){

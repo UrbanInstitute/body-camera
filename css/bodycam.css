@@ -310,6 +310,14 @@ margin-bottom: 30px;
 	padding-left: 4px;
 	padding-right: 4px;
 }
+.text.page-scroll{
+	color: #1696d2;
+	text-decoration: none;
+	cursor: pointer;
+}
+.text.page-scroll:hover{
+	text-decoration: underline;
+}
 
 .about-section{
 	padding-bottom: 30px;
