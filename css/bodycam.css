@@ -587,11 +587,12 @@ footer {
     text-align: left;
     /*height: 100px;*/
     padding: 10px;
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.95);
     margin-top: 18px;
     margin-left: -3px;
     /*border: 2px solid black;*/
     box-shadow: 0px 3px 5px #ccc;
+    z-index: 2;
 }
 .blurbTooltip:after {
 	bottom: 100%;
@@ -603,7 +604,7 @@ footer {
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: rgba(255,255,255,.8);
+	border-bottom-color: rgba(255,255,255,.9);
 	border-width: 10px;
 	margin-left: -10px;
 
