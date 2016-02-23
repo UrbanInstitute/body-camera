@@ -99,7 +99,7 @@ var promise = new Promise(function(resolve, reject) {
                 //header labels
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").html(function(column) {
                     if (column == "audio") return "Prohibit only audio recordings<i class=\"fa fa-info-circle\" data-text=\"Video recordings with no sound may be permissible.\"></i>";
-                    if (column == "allPartyConsent") return "Require two-party consent<i class=\"fa fa-info-circle\" data-text=\"In some states, this is called &ldquo;all-party consent.&rdquo;\"></i>";
+                    if (column == "allPartyConsent") return "Requires two/all-party consent<i class=\"fa fa-info-circle\" data-text=\"Law enforcement exceptions may exist conditional on context and location.\"></i>";
                     if (column == "privatePlaces") return "Restrict recordings where privacy is expected<i class=\"fa fa-info-circle\" data-text=\"In many states, this is called a &ldquo;justifiable expectation&rdquo; of not being recorded.\"></i>";
                     if (column == "lawEnforcement") return "Exempt police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement may choose to withhold records in order to protect active investigations, public safety, or national security.\"></i>";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Create or recommend a study group or pilot";
@@ -409,7 +409,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Require two-party consent<i class=\"fa fa-info-circle\" data-text=\"In some states, this is called &ldquo;all-party consent.&rdquo;\"></i>")
+            .html("Requires two/all-party consent<i class=\"fa fa-info-circle\" data-text=\"Law enforcement exceptions may exist conditional on context and location.\"></i>")
             .attr("class", function(d){
                 var value = d.allPartyConsent;
                 if (value == "passed"){
