@@ -6,8 +6,8 @@ var promise = new Promise(function(resolve, reject) {
     //to edit data, visit https://docs.google.com/spreadsheets/d/15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ/edit?usp=sharing
     //JPC will edit a different sheet, which is not live: https://docs.google.com/spreadsheets/d/1wShnyXTUYbu9LqkF6GG_dQeV70n4rqLNVsZwBNq8B-g/edit#gid=0
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
-
-    var GOOGLE_ID = "15yXsR5uVKej8hobUdhBNzwazDZeF1JBF4IORk6eBQVQ"
+    
+    var GOOGLE_ID = "1vXUL4EmbuJAYgUig7EH3O0HyQ2UPpMJFTgL67nWSczs"
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
