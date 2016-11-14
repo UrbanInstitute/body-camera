@@ -1,4 +1,17 @@
-
+#popUp{
+    width: calc(100% - 60px);
+    height: calc(100% - 110px);
+    left: 30px;
+    top: 80px;
+    background: rgba(255,255,255,.95);
+    position: fixed;
+    z-index: 99;
+    display: table-cell;
+    vertical-align: middle;
+}
+#popUp div{
+    display: inline-block;
+}
 .stateborders {
     fill: none;
     stroke: #ccc;
