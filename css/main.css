@@ -1,16 +1,59 @@
 #popUp{
-    width: calc(100% - 60px);
-    height: calc(100% - 110px);
-    left: 30px;
-    top: 80px;
-    background: rgba(255,255,255,.95);
+    top: 50px;
+    z-index: 99999;
     position: fixed;
-    z-index: 99;
-    display: table-cell;
-    vertical-align: middle;
+    width: 100%;
+    height: calc(100% - 50px);
+    background: #000;
 }
-#popUp div{
-    display: inline-block;
+#pu-main{
+    background: #fff;
+    height: 80%;
+    top: 10%;
+    position: relative;
+    width: 100%;
+}
+#pu-content{
+    position: relative;
+    top: 35%;
+}
+#pu-title{
+    font-weight: 300;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    /* display: table-caption; */
+    /* width: 320px; */
+    font-size: 44px;
+    width: 727px;
+}
+#pu-no{
+    font-size: 15px;
+    font-style: italic;
+    color: #1696d2;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 260px;
+    text-align: center;
+}
+#pu-button{
+    width: 179px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    background: #1696d2;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+@media(max-width: 740px){
+    #pu-title{
+        width: 290px;
+    }
+    #pu-content{
+        top: 15%;
+    }
 }
 .stateborders {
     fill: none;
