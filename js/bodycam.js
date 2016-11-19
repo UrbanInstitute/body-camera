@@ -594,3 +594,20 @@ promise.then(function(result) {
     
 })
 
+function closePopUp(){
+    d3.select("#popUp")
+        .transition()
+        .style("opacity",0)
+        .on("end",function(){
+            d3.select(this).remove()
+        })
+}
+d3.select("#pu-no").on("click", closePopUp)
+d3.select("#pu-close").on("click", closePopUp)
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) { // Esc
+        closePopUp()
+    }
+});
+
+

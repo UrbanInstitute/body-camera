@@ -35,6 +35,7 @@
     margin-top: 10px;
     width: 260px;
     text-align: center;
+    cursor: pointer;
 }
 #pu-button{
     width: 179px;
@@ -46,6 +47,20 @@
     padding: 10px 15px 10px 15px;
     margin: 0 auto;
     margin-top: 40px;
+}
+#pu-link{
+    text-decoration: none !important;
+}
+#pu-close{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: white;
+    cursor: pointer;
+}
+#pu-close img{
+    width: 30px;
 }
 @media(max-width: 740px){
     #pu-title{
