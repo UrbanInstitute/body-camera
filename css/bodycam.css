@@ -178,14 +178,14 @@ tr:hover > .rowLabel *{
 .full-screen {
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 350px;
     width: auto;
-    height: auto;
+    height: 350px;
     z-index: 0;
     background-size: cover;
-    opacity: 0.5;
+    
 }
 
 .full-width-container{
@@ -228,7 +228,7 @@ tr:hover > .rowLabel *{
 .intro {
 	display: table;
 	width: 100%;
-	height: auto;
+	height: 350px;
 	padding: 100px 0;
 	text-align: center;
 	color: #fff !important;
@@ -244,7 +244,8 @@ tr:hover > .rowLabel *{
 .intro .intro-body {
 	display: table-cell;
 	vertical-align: middle;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
+	padding-top:45px;
 }
 
 .intro .intro-body .brand-heading {
@@ -252,7 +253,7 @@ tr:hover > .rowLabel *{
 }
 
 .intro .intro-body .intro-text {
-	font-size: 1.2em;
+	font-size: 0.8em;
 	color: #fff !important;
 	font-weight: 300;
 	line-height: 1.5em;
@@ -264,7 +265,7 @@ tr:hover > .rowLabel *{
 }
 
 #intro-container{
-	position: absolute; z-index: -99; width: 100%; height: 100%;
+	position: absolute; z-index: -99; width: 100%; height: 350px;
 	background-color: #000;
 	background-size: cover;
 	background-blend-mode:overlay;
@@ -473,16 +474,16 @@ footer {
 }
 @media(min-width:768px) {
 	.intro {
-		height: 100%;
+		height: 350px;
 		padding: 0;
 	}
 
 	.intro .intro-body .brand-heading {
-		font-size: 3em;
+		font-size: 1.7em;
 	}
 
 	.intro .intro-body .intro-text {
-		font-size: 1.2em;
+		font-size: 0.9em;
 	}
 	#mobile{
 		display: none;
