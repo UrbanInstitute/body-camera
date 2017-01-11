@@ -684,7 +684,13 @@ footer {
 	margin-left: -10px;
 
 }
-
+#mobileExplainer{
+	font-size: 14px;
+    font-style: italic;
+    color: #1696d2;
+    text-align: center;
+    margin-bottom: 13px;
+}
 /** key removed because no pending laws in dataset, remove if data is updated w/ pending laws **/
 #key{
     display: none;

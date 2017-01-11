@@ -394,7 +394,7 @@ var promise = new Promise(function(resolve, reject) {
             .attr("class", "state-name")
 
             stateList.append("div")
-            .html("Prohibits only audio recordings<i class=\"fa fa-info-circle\" data-text=\"Video recordings with no sound may be permissible.\"></i>")
+            .html("Prohibits only audio recordings")
             .attr("class", function(d){
                 var value = d.audio;
                 if (value == "passed"){
@@ -409,7 +409,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Requires two/all-party consent<i class=\"fa fa-info-circle\" data-text=\"Law enforcement exceptions may exist conditional on context and location.\"></i>")
+            .html("Requires two/all-party consent")
             .attr("class", function(d){
                 var value = d.allPartyConsent;
                 if (value == "passed"){
@@ -424,7 +424,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Restricts recordings where privacy is expected<i class=\"fa fa-info-circle\" data-text=\"In many states, lawful recordings are contingent on whether there is a reasonable expectation of privacy.\"></i>")
+            .html("Restricts recordings where privacy is expected")
             .attr("class", function(d){
                 var value = d.privatePlaces;
                 if (value == "passed"){
@@ -439,7 +439,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Exempts police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement may choose to withhold records in order to protect active investigations, public safety, or national security.\"></i>")
+            .html("Exempts police from public records requests")
             .attr("class", function(d){
                 var value = d.lawEnforcement;
                 if (value == "passed"){
