@@ -676,3 +676,10 @@ footer {
 
 }
 
+#mobileExplainer{
+	font-size: 14px;
+    font-style: italic;
+    color: #1696d2;
+    text-align: center;
+    margin-bottom: 13px;
+}
