@@ -598,7 +598,7 @@ function closePopUp(){
     d3.select("#popUp")
         .transition()
         .style("opacity",0)
-        .on("end",function(){
+        .each("end",function(){
             d3.select(this).remove()
         })
 }
