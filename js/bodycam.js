@@ -16,7 +16,7 @@ var promise = new Promise(function(resolve, reject) {
             .on("click", function(){
                 // console.log($('#stateTable').offset().top)
                 if(d3.select("#mobile").style("display") == "block"){
-                    $("html, body").animate({ scrollTop: $('#mobile #stateTable').offset().top-205 }, 1000);    
+                    $("html, body").animate({ scrollTop: $('#mobile #stateTable').offset().top-120 }, 1000);    
                 }else{
                     $("html, body").animate({ scrollTop: $('#desktopTitle #stateTable').offset().top-90 }, 1000);
                 }

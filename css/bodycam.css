@@ -219,7 +219,7 @@ tr:hover > .rowLabel *{
 
 .blocked{
 	    /*background: rgba(0,0,0,0.5);*/
-    padding: 20px;
+    padding: 30px;
 }
 
 #map0{
@@ -455,6 +455,8 @@ footer {
 	.intro{
 		background: url(../img/mobile-background.jpg) no-repeat center center scroll;
 		background-size: cover;
+		padding-bottom:0px;
+		padding-top:0px;
 	}
 	#intro-gradient{
 		display: none;
@@ -472,6 +474,8 @@ footer {
     z-index: 10000;
 }
 }
+
+
 @media(min-width:768px) {
 	.intro {
 		height: 350px;
@@ -486,6 +490,10 @@ footer {
 		font-size: 0.9em;
 	}
 	#mobile{
+		display: none;
+	}
+	
+	.btn-circle {
 		display: none;
 	}
 }
