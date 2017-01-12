@@ -220,6 +220,8 @@ tr:hover > .rowLabel *{
 .blocked{
 	    /*background: rgba(0,0,0,0.5);*/
     padding: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #map0{
