@@ -547,7 +547,7 @@ var promise = new Promise(function(resolve, reject) {
                     } else if (value =="proposedpending"){
                         return "mapProposedpending ";
                     } else if (value =="recent"){
-                        return "maprecent ";
+                        return "mapRecent ";
                     } else{
                         return "mapNo ";
                     }
