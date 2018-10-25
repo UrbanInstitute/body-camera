@@ -40,7 +40,7 @@ var promise = new Promise(function(resolve, reject) {
         console.log(sheets)
         var blurbs = sheets.blurbs.all()
         var data = sheets.data.all()
-         document.getElementById("date").innerHTML = "Data current as of " + data[0].DateUpdated;
+         // document.getElementById("date").innerHTML = "Data current as of " + data[0].DateUpdated;
         // The table generation function
         function tabulate(data, blurbs, columns) {
                 // console.log(data, blurbs)
@@ -101,12 +101,12 @@ var promise = new Promise(function(resolve, reject) {
                 //header labels
                 thead.append("tr").selectAll("th").data(columns).enter().append("th").html(function(column) {
                     if (column == "audio") return "Prohibits only audio recordings<i class=\"fa fa-info-circle\" data-text=\"Video recordings with no sound may be permissible.\"></i>";
-                    if (column == "allPartyConsent") return "Requires two/all-party consent<i class=\"fa fa-info-circle\" data-text=\"Law enforcement exceptions may exist conditional on context and location.\"></i>";
+                    if (column == "allPartyConsent") return "Requires two-/all-party consent<i class=\"fa fa-info-circle\" data-text=\"Law enforcement exceptions may exist conditional on context and location.\"></i>";
                     if (column == "privatePlaces") return "Restricts recordings where privacy is expected<i class=\"fa fa-info-circle\" data-text=\"In many states, lawful recordings are contingent on whether there is a reasonable expectation of privacy.\"></i>";
                     if (column == "lawEnforcement") return "Exempts police from public records requests<i class=\"fa fa-info-circle\" data-text=\"Law enforcement may choose to withhold records in order to protect active investigations, public safety, or national security.\"></i>";
                     if (column == "CreatesRecommendsaStudyGroupPilotProgram") return "Creates or recommends a study group or pilot";
-                    if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where and when cameras can be used";
-                    if (column == "RestrictsPublicAccess") return "Restricts public access to footage";
+                    if (column == "DictatesWhenWhereCamerasCanBeUsed") return "Dictates where, when, and how cameras can be used";
+                    if (column == "RestrictsPublicAccess") return "Sets rules for public access to footage";
                     if (column == "PrescribesStorageTime") return "Prescribes video storage time";
                 }).attr("class", "section-header");
                 // append the map row
@@ -411,7 +411,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Requires two/all-party consent")
+            .html("Requires two-/all-party consent")
             .attr("class", function(d){
                 var value = d.allPartyConsent;
                 if (value == "passed"){
@@ -471,7 +471,7 @@ var promise = new Promise(function(resolve, reject) {
             })
 
             stateList.append("div")
-            .html("Dictates where and when cameras can be used")
+            .html("Dictates where, when, and how cameras can be used")
             .attr("class", function(d){
                 var value = d.DictatesWhenWhereCamerasCanBeUsed;
                 if (value == "passed"){
@@ -487,7 +487,7 @@ var promise = new Promise(function(resolve, reject) {
 
 
             stateList.append("div")
-            .html("Restricts public access to footage")
+            .html("Sets rules for public access to footage")
             .attr("class", function(d){
                 var value = d.RestrictsPublicAccess;
                 if (value == "passed"){
