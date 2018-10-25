@@ -50,8 +50,8 @@ td.lawEnforcement{
 	height: 8px;
 }
 .mapPassed{
-	fill:#1696d2;
-	stroke:#1696d2;
+	fill:#0a4c6a;
+	stroke:#0a4c6a;
 }
 .mapProposedpending{
 	fill:#fdbf11;
@@ -59,8 +59,8 @@ td.lawEnforcement{
 
 }
 .mapRecent{
-	fill:#55b748;
-	stroke:#55b748;
+	fill:#1696d2;
+	stroke:#1696d2;
 
 }
 .mapNo{
@@ -69,7 +69,7 @@ td.lawEnforcement{
 }
 
 .mapState.passed{
-		fill:#1696d2;
+		fill:#0a4c6a;
 }
 
 .mapState.proposedpending{
@@ -77,7 +77,7 @@ td.lawEnforcement{
 }
 
 .mapState.recent{
-	fill:#55b748;
+	fill:#1696d2;
 }
 
 .mapPassedSelected {
@@ -98,14 +98,14 @@ td.lawEnforcement{
 }
 */
 .recent{
-	background-color: #55b748;
+	background-color: #1696d2;
 }
 /*.recent:hover{
 		border: 2px solid #000;
 }
 */.passed{
-	background-color:#1696d2;
-	fill:#1696d2;
+	background-color:#0a4c6a;
+	fill:#0a4c6a;
 }
 /*.passed:hover{
 	border: 2px solid #000;
@@ -309,13 +309,13 @@ margin-bottom: 30px;
 	font-size: 28pt;
 }
 .textHighlight{
-	background-color: #1696d2;
+	background-color: #0a4c6a;
 	font-weight: 400;
 	padding-left: 4px;
 	padding-right: 4px;
 }
 .text.page-scroll{
-	color: #1696d2;
+	color: #0a4c6a;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -398,7 +398,7 @@ footer {
 }
 .list-passed{
 	color: #fff;
-    background-color: #1696d2;
+    background-color: #0a4c6a;
     background-image: url(../img/icons-07.png);
     background-position: 10px center;
     background-repeat: no-repeat;
@@ -412,7 +412,7 @@ footer {
 }
 .list-recent{
 	color: #fff;
-    background-color: #55b748;
+    background-color: #1696d2;
     background-image: url(../img/icons-07.png);
     background-position: 10px center;
     background-repeat: no-repeat;
@@ -519,7 +519,7 @@ footer {
 .btn-circle:hover,
 .btn-circle:focus {
 	outline: 0;
-	color: #1696d2;
+	color: #0a4c6a;
 	background: rgba(0,0,0,.4);
 }
 
@@ -650,7 +650,7 @@ footer {
     position: relative;
 }
 .fa-info-circle:hover{
-	color: #1696d2;
+	color: #0a4c6a;
 }
 .fa-info-circle:before {
     content: "\f05a";
@@ -690,7 +690,7 @@ footer {
 #mobileExplainer{
 	font-size: 14px;
     font-style: italic;
-    color: #1696d2;
+    color: #0a4c6a;
     text-align: center;
     margin-bottom: 13px;
 }
