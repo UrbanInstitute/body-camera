@@ -49,16 +49,16 @@ td.lawEnforcement{
 .header-group{
 	height: 8px;
 }
-.mapPassed{
-	fill:#0a4c6a;
-	stroke:#0a4c6a;
+.mapRecent{
+	fill:#55b748;
+	stroke:#55b748;
 }
 .mapProposedpending{
 	fill:#fdbf11;
 	stroke:#fdbf11;
 
 }
-.mapRecent{
+.mappassed{
 	fill:#1696d2;
 	stroke:#1696d2;
 
@@ -68,15 +68,15 @@ td.lawEnforcement{
 	stroke: #e6e6e6;
 }
 
-.mapState.passed{
-		fill:#0a4c6a;
+.mapState.recent{
+		fill:#55b748;
 }
 
 .mapState.proposedpending{
 	fill: #fdbf11;
 }
 
-.mapState.recent{
+.mapState.passed{
 	fill:#1696d2;
 }
 
@@ -97,17 +97,17 @@ td.lawEnforcement{
 	border: 2px solid #000;
 }
 */
-.recent{
+.passed{
 	background-color: #1696d2;
 }
-/*.recent:hover{
+/*.passed:hover{
 		border: 2px solid #000;
 }
-*/.passed{
-	background-color:#0a4c6a;
-	fill:#0a4c6a;
+*/.recent{
+	background-color:#55b748;
+	fill:#55b748;
 }
-/*.passed:hover{
+/*.recent:hover{
 	border: 2px solid #000;
 }*/
 .no{
@@ -309,13 +309,13 @@ margin-bottom: 30px;
 	font-size: 28pt;
 }
 .textHighlight{
-	background-color: #0a4c6a;
+	background-color: #55b748;
 	font-weight: 400;
 	padding-left: 4px;
 	padding-right: 4px;
 }
 .text.page-scroll{
-	color: #0a4c6a;
+	color: #55b748;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -396,9 +396,9 @@ footer {
 	padding-top: 12px;
 	margin-bottom: 2px;
 }
-.list-passed{
+.list-recent{
 	color: #fff;
-    background-color: #0a4c6a;
+    background-color: #55b748;
     background-image: url(../img/icons-07.png);
     background-position: 10px center;
     background-repeat: no-repeat;
@@ -410,7 +410,7 @@ footer {
     background-position: 10px center;
     background-repeat: no-repeat;
 }
-.list-recent{
+.list-passed{
 	color: #fff;
     background-color: #1696d2;
     background-image: url(../img/icons-07.png);
@@ -519,7 +519,7 @@ footer {
 .btn-circle:hover,
 .btn-circle:focus {
 	outline: 0;
-	color: #0a4c6a;
+	color: #55b748;
 	background: rgba(0,0,0,.4);
 }
 
@@ -650,7 +650,7 @@ footer {
     position: relative;
 }
 .fa-info-circle:hover{
-	color: #0a4c6a;
+	color: #55b748;
 }
 .fa-info-circle:before {
     content: "\f05a";
@@ -690,7 +690,7 @@ footer {
 #mobileExplainer{
 	font-size: 14px;
     font-style: italic;
-    color: #0a4c6a;
+    color: #55b748;
     text-align: center;
     margin-bottom: 13px;
 }
