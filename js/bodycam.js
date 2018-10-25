@@ -340,15 +340,15 @@ var promise = new Promise(function(resolve, reject) {
                         }
                     });
                 map7.selectAll("path").data(json.features).enter().append("path").attr("d", path)
-                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"DictatesWhenWhereCamerasCanBeUsed"}})
+                    // .attr("class", function(d){ if (d.properties.value){return d.properties.value.ABBR +" mapState "+"RestrictsPublicAccess"}})
                     .attr("class", function(d) {
                         //Get data value
                         if (d.properties.value) {
-                            var value = d.properties.value.DictatesWhenWhereCamerasCanBeUsed;
+                            var value = d.properties.value.RestrictsPublicAccess;
                             if (value) {
-                                return d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed " + value;
+                                return d.properties.value.ABBR + " mapState " + "RestrictsPublicAccess " + value;
                             } else {
-                                return "mapNo " + d.properties.value.ABBR + " mapState " + "DictatesWhenWhereCamerasCanBeUsed";
+                                return "mapNo " + d.properties.value.ABBR + " mapState " + "RestrictsPublicAccess";
                             }
                         }
                     });
