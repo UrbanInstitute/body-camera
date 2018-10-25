@@ -58,7 +58,7 @@ td.lawEnforcement{
 	stroke:#fdbf11;
 
 }
-.mapBoth{
+.mapRecent{
 	fill:#55b748;
 	stroke:#55b748;
 
@@ -76,7 +76,7 @@ td.lawEnforcement{
 	fill: #fdbf11;
 }
 
-.mapState.both{
+.mapState.recent{
 	fill:#55b748;
 }
 
@@ -96,10 +96,11 @@ td.lawEnforcement{
 /*.proposedpending:hover{
 	border: 2px solid #000;
 }
-*/.both{
+*/
+.recent{
 	background-color: #55b748;
 }
-/*.both:hover{
+/*.recent:hover{
 		border: 2px solid #000;
 }
 */.passed{
@@ -409,7 +410,7 @@ footer {
     background-position: 10px center;
     background-repeat: no-repeat;
 }
-.list-both{
+.list-recent{
 	color: #fff;
     background-color: #55b748;
     background-image: url(../img/icons-07.png);
@@ -694,6 +695,6 @@ footer {
     margin-bottom: 13px;
 }
 /** key removed because no pending laws in dataset, remove if data is updated w/ pending laws **/
-#key{
+/*#key{
     display: none;
-}
+}*/

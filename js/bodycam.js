@@ -7,8 +7,10 @@ var promise = new Promise(function(resolve, reject) {
     //JPC will edit a different sheet, which is not live: https://docs.google.com/spreadsheets/d/1wShnyXTUYbu9LqkF6GG_dQeV70n4rqLNVsZwBNq8B-g/edit#gid=0
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
     
-    var GOOGLE_ID = "1vXUL4EmbuJAYgUig7EH3O0HyQ2UPpMJFTgL67nWSczs"
+    // var GOOGLE_ID = "1vXUL4EmbuJAYgUig7EH3O0HyQ2UPpMJFTgL67nWSczs"
+    var GOOGLE_ID = "1ge0fmqhQKiWjJJ8pZe7DPSch4SxelJW1ejGVcn59l_g"
     var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
+
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
     function init() {
@@ -134,15 +136,15 @@ var promise = new Promise(function(resolve, reject) {
                         });
                 }).enter().append("td").text(function(d) {
                     if (d.value != '') {
-                        if (d.value != "passed" && d.value != "proposedpending" && d.value != "both") return d.value; //should only return stateNames
+                        if (d.value != "passed" && d.value != "proposedpending" && d.value != "recent") return d.value; //should only return stateNames
                     }
                 }).attr("class", function(d) {
                     if (d.value == "passed") {
                         return "passed " + d.column;
                     } else if (d.value == "proposedpending"){
                         return "proposedpending " + d.column;
-                    } else if (d.value == "both"){
-                        return "both " + d.column;
+                    } else if (d.value == "recent"){
+                        return "recent " + d.column;
                     } else if (d.value == "") {
                         return "no " + d.column;
                     } else {
@@ -401,8 +403,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -416,8 +418,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -431,8 +433,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -446,8 +448,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -461,8 +463,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -476,8 +478,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -492,8 +494,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -507,8 +509,8 @@ var promise = new Promise(function(resolve, reject) {
                     return "list-item list-passed";
                 }else if (value == "proposedpending"){
                     return "list-item list-proposedpending"
-                }else if (value == "both"){
-                    return "list-item list-both"
+                }else if (value == "recent"){
+                    return "list-item list-recent"
                 }else{
                     return "list-item list-no"
                 }
@@ -544,8 +546,8 @@ var promise = new Promise(function(resolve, reject) {
                         return "mapPassed ";
                     } else if (value =="proposedpending"){
                         return "mapProposedpending ";
-                    } else if (value =="both"){
-                        return "mapBoth ";
+                    } else if (value =="recent"){
+                        return "maprecent ";
                     } else{
                         return "mapNo ";
                     }
