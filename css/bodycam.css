@@ -262,6 +262,11 @@ tr:hover > .rowLabel *{
 	line-height: 1.5em;
 }
 
+.intro .intro-body .intro-text.date { 
+	font-style: italic;
+	font-size:0.7em;
+}
+
 .brand-heading{
 	color: #fff;
 	font-weight: 300;
