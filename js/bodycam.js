@@ -8,8 +8,10 @@ var promise = new Promise(function(resolve, reject) {
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
     
     // var GOOGLE_ID = "1vXUL4EmbuJAYgUig7EH3O0HyQ2UPpMJFTgL67nWSczs"
-    var GOOGLE_ID = "1ge0fmqhQKiWjJJ8pZe7DPSch4SxelJW1ejGVcn59l_g"
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
+    var data_id =  "1ge0fmqhQKiWjJJ8pZe7DPSch4SxelJW1ejGVcn59l_g"
+    var blurb_id = "263941599"
+
+    // var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
 
     var columnList = ["State", "audio","allPartyConsent", "privatePlaces", "lawEnforcement", "CreatesRecommendsaStudyGroupPilotProgram", "DictatesWhenWhereCamerasCanBeUsed", "RestrictsPublicAccess", "PrescribesStorageTime"];
 
@@ -24,22 +26,42 @@ var promise = new Promise(function(resolve, reject) {
                 }
             })
 
-        Tabletop.init({
-            key: public_spreadsheet_url,
-            callback: showInfo,
-            simpleSheet: false
-        });
+
+        Papa.parse('https://docs.google.com/spreadsheets/d/' + data_id + '/pub?output=csv&gid=' + blurb_id, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                var blurbs = results.data
+                Papa.parse('https://docs.google.com/spreadsheets/d/' + data_id + '/pub?output=csv', {
+                    download: true,
+                    header: true,
+                    complete: function(results) {
+                        var data = results.data
+                        showInfo(blurbs, data)
+                        
+                    }
+                })
+                
+            }
+        })
+
+
+        // Tabletop.init({
+        //     key: public_spreadsheet_url,
+        //     callback: showInfo,
+        //     simpleSheet: false
+        // });
     }
 
-    function showInfo(sheets) {
+    function showInfo(blurbs, data) {
         // data comes through as a simple array since simpleSheet is turned on
         // alert("Successfully processed " + data.length + " rows!")
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].pass, data[1].Name, data[2].Name ].join(", ");
 
         //last updated
-        console.log(sheets)
-        var blurbs = sheets.blurbs.all()
-        var data = sheets.data.all()
+        // console.log(sheets)
+        // var blurbs = sheets.blurbs.all()
+        // var data = sheets.data.all()
          // document.getElementById("date").innerHTML = "Data current as of " + data[0].DateUpdated;
         // The table generation function
         function tabulate(data, blurbs, columns) {
@@ -201,7 +223,7 @@ var promise = new Promise(function(resolve, reject) {
                 return table;
             }
 
-        
+        console.log(data, blurbs, columnList)
             // render the table
         var stateTable = tabulate(data, blurbs, columnList);
 
