@@ -8,7 +8,7 @@ var promise = new Promise(function(resolve, reject) {
     //copy contents of JPCs sheet into the new sheet, or change the public spreadsheet url below to be that of the JPC sheet.
     
     // var GOOGLE_ID = "1vXUL4EmbuJAYgUig7EH3O0HyQ2UPpMJFTgL67nWSczs"
-    var data_id =  "1NdBGG6caXdLowZcowMsn476KOv6JzlOrprM-ycDFDGo"
+    var data_id =  "1gxBY-61l5a0CYrP6G0cwCMWqvJ5_SEnrTGs1-N6kOIY"
     var blurb_id = "263941599"
 
     // var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/'+ GOOGLE_ID +'/pubhtml';
