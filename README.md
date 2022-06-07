@@ -13,4 +13,10 @@ There's a lot of extraneous code and extraneous files in here from various forme
 
 Majority of data changes (including copy edits to text) can be made by updating Google doc. Note that currently (as of 6/7/2022), the live version on the `apps` server is behind in commits, and pulls from a different, older Google doc. So updating the Google doc will only update the `apps-staging` version. Pulling to `apps` will deploy new Google doc.
 
+**So to edit the blurbs, it's this url:
+[https://docs.google.com/spreadsheets/d/1gxBY-61l5a0CYrP6G0cwCMWqvJ5_SEnrTGs1-N6kOIY/edit#gid=263941599](https://docs.google.com/spreadsheets/d/1gxBY-61l5a0CYrP6G0cwCMWqvJ5_SEnrTGs1-N6kOIY/edit#gid=263941599)**
+
+**To edit the heatmap, it's this url:
+[https://docs.google.com/spreadsheets/d/1gxBY-61l5a0CYrP6G0cwCMWqvJ5_SEnrTGs1-N6kOIY/edit#gid=0](https://docs.google.com/spreadsheets/d/1gxBY-61l5a0CYrP6G0cwCMWqvJ5_SEnrTGs1-N6kOIY/edit#gid=0)**
+
 Also note that after editing the Google Doc, you must re "publish to web" via menus to make live!
